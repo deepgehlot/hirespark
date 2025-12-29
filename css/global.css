@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+
+:root {
+    /* Fonts */
+    --font-primary: 'Poppins', sans-serif;
+
+    /* Brand Colors */
+    --color-primary: #173187; /* Yves Blue */
+    --color-secondary: #181935; /* Dark Navy #181935 */
+    --color-tertiary: #181935; /* Dark Navy */
+    --color-quaternary: #181935; /* Dark Navy */
+    
+    /* Neutral Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text-body: rgba(24, 25, 53, 0.7); /* Dark Navy with opacity */
+    --color-text-heading: #ffffff;
+    --color-text-dark: #181935; /* Dark Navy */
+    
+    /* Backgrounds */
+    --color-bg-dark: #181935; /* Dark Navy */
+    --color-bg-darker: #0d0e21; /* Darker variant */
+    --color-bg-overlay: rgba(23, 49, 135, 0.95); /* Yves Blue Overlay */
+    
+    --color-bg-footer-mobile: #181935;
+    
+    /* Accents */
+    --color-accent-cyan: #173187; /* Using Yves Blue here for visibility */
+    --color-accent-blue: #173187; /* Yves Blue */
+    --color-accent-dream-blue: #173187
+; /* Muted Beige/Gray */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(to right, var(--color-secondary) 0%, var(--color-primary) 100%);
+    --gradient-preloader: linear-gradient(to right, var(--color-tertiary), var(--color-accent-dream-blue));
+    --gradient-overlay: linear-gradient(to right, rgba(24, 25, 53, 0.95), rgba(23, 49, 135, 0.95));
+}
