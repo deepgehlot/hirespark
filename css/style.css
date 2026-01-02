@@ -98,6 +98,8 @@
 
 body {
     font-family: var(--font-primary);
+    overflow-x: hidden;
+
 }
 .darker-blue{
     background: linear-gradient(180deg,#240044 0,#0f0240 25%,#400959 40%,#0f0240 65%,#0f0240);
@@ -202,7 +204,7 @@ ol {
     color: var(--color-text-dark);
 }
 .header-area.sticky .d.classy-nav-container a {
-    color: rgba(255,255,255,.7);
+    color: var(--color-text-dark);
 }
 .preload-content {
     position: absolute;
@@ -486,6 +488,10 @@ ol {
     padding-top: 100px;
     padding-bottom: 70px;
 }
+.section-padding-70-70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 .section-padding-0-50 {
     padding-top: 0;
     padding-bottom: 50px;
@@ -543,10 +549,12 @@ ol {
 }
 
 .section-heading h2 {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 36px; /* Standardized Size */
+    font-weight: 700; /* Standardized Weight */
+    color: #1F1135; /* Standardized Navy Color */
     text-transform: capitalize;
     margin-bottom: 15px;
+    font-family: var(--font-primary); /* Ensure Font Family */
 }
 
 .section-heading > p {
@@ -732,6 +740,31 @@ ol {
 .dream-btn.green-btn {
     background:var(--color-accent-dream-blue)
 }
+
+/* CTA Custom Button Style */
+.dream-btn.cta-btn-v2 {
+    background: #1F1135;
+    border-radius: 12px; /* Rounded corners */
+    text-transform: none; /* Normal case */
+    font-size: 18px;
+    font-weight: 700;
+    height: auto;
+    line-height: 1.5;
+    padding: 14px 32px;
+    letter-spacing: normal;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dream-btn.cta-btn-v2:hover {
+    background: #2D1A4A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    color: #fff;
+}
 .more-btn.pink {
     background: #F69;
     border: 0;
@@ -762,40 +795,178 @@ ol {
 }
 /* ##### 2.0 Header Area CSS ##### */
 
+/* =========================================
+   FlowCV-Style Rounded Sticky Navbar
+   ========================================= */
+
+/* Base Header */
 .header-area {
     position: fixed;
-    z-index: 5000;
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 9999;
+    background: transparent;
+    padding: 20px 0;
 }
 
+/* Ensure no horizontal scroll globally */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+/* Sticky State (Floating Pill) */
 .header-area.sticky {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    background-color: var(--color-white);
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-    border-bottom: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 10px 0;
+    margin-top: 15px; /* Creates the float effect */
+    width: 90%; /* Floating width */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px; /* The Pill Shape */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.dark.classy-nav-container {
-    background-color: transparent;
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #333;
+    font-size: 20px;
+}
+.navbar-brand .brand-text {
+    margin-left: 10px;
 }
 
-.classy-navbar {
-    height: 90px;
+/* Nav Links */
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Toggler */
+.navbar-toggler {
+    border: none;
+    background: transparent;
     padding: 0;
+    cursor: pointer;
+}
+.toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s;
 }
 
-.classynav ul li a {
-    text-transform: uppercase;
+/* =========================================
+   Mobile Menu (Custom Sidebar)
+   ========================================= */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
-.classynav ul li .megamenu li a {
-    font-size: 80%;
+.mobile-menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%; /* 75% Width as requested */
+    max-width: 320px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Active State */
+.mobile-menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+.mobile-menu-overlay.active .mobile-menu-content {
+    transform: translateX(0);
+}
+
+/* Mobile Header inside menu */
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.close-icon {
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+    color: #333;
+}
+
+/* Mobile Nav Links */
+.mobile-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mobile-nav li {
+    margin-bottom: 20px;
+}
+.mobile-nav li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    transition: color 0.3s;
+}
+.mobile-nav li a:hover {
+    color: var(--color-primary);
+}
+
+.mobile-cta {
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Overrides */
+@media (min-width: 992px) {
+    .navbar-toggler { display: none; }
+    .mobile-menu-overlay { display: none; }
+    .navbar-collapse { display: flex !important; }
+}
+@media (max-width: 991px) {
+    .navbar-collapse { display: none !important; }
+    .navbar-toggler { display: block; }
+
+    /* On mobile, standard sticky behavior (full width), or keep floating? 
+       Typically floating on mobile loses space. Let's make it full width on mobile but white on scroll. */
+    .header-area.sticky {
+        width: 95%; /* Slightly padded */
+        border-radius: 15px; /* Smaller radius */
+        margin-top: 10px;
+    }
 }
 .side-feature-list-item {
     display: -webkit-box;
@@ -849,7 +1020,7 @@ ol {
     background-size: cover;
 }
 .welcome_area.demo2{
-    background: #fff;
+    background: transparent;
 }
 .welcome_area.demo3{
     background: url(../img/bg-img/demo3-bg.html) no-repeat top center;
@@ -898,7 +1069,7 @@ ol {
 .welcome-content {
     position: relative;
     z-index: 1;
-    margin-top: 90px;
+    margin-top: 140px; /* Increased from 90px to clear floating navbar */
 }
 
 .promo-section {
@@ -1369,7 +1540,7 @@ p.artficial:before{
     }
     .banner-box{
         margin-right: -100px;
-        margin-top: 40px
+        /* margin-top: 40px */
     }
     .banner-box.v2{
         margin-left: -50px;
@@ -1412,7 +1583,8 @@ p.artficial:before{
 .welcome_area.video .desc{
     max-width: 60%;
     margin: 0 auto;
-    font-size: 16px
+    font-size: 16px;
+    padding-top: 50px; /* Add padding for video page description transparency */
 }
 @media (max-width: 767px) {
   .fullscreen-bg {
@@ -2543,14 +2715,13 @@ p.artficial:before{
     }
 }
 .bub-left {
-    background: url(../img/svg/benefits-bg.svg) no-repeat center left;
+    background: none;
 }
 .bub-right {
-    background: url(../img/svg/bg_hero.svg) no-repeat center right;
+    background: none;
 }
 .ring-bg {
-    background: url(../img/bg-img/ring-bg.png) no-repeat center center;
-    background-size: cover;
+    background: none;
 }
 .hex-pat-1{
     background: url('../img/svg/hex-pattern.svg') no-repeat center left;
@@ -2964,7 +3135,7 @@ p.artficial:before{
     margin: 0 15px;
     overflow: hidden;
     padding: 30px 20px;
-    background: url(../img/core-img/cards-bg.html), #fff;
+    background: #fff;
 }
 .icon_wrapper:after {
     content: '';
@@ -3498,8 +3669,7 @@ textarea:required {
     position: relative;
     z-index: 1;
     padding: 0;
-    background: url(../img/core-img/footer-bg1.png) no-repeat;
-    background-size: cover;
+    background: var(--color-bg-dark);
 }
 .footer-content-area{
     padding: 80px 0;
@@ -4280,7 +4450,10 @@ textarea:required {
 /* ##### Light Version CSS ##### */
 
 body.light-version {
-    background: #fff !important;
+    /* background: #EBEBEB !important; */
+    /* background: #FFFBF4 !important; */
+    /* background: #F5F3FF !important; */
+    background: #f0eeeb !important;
 }
 
 .light-version p {
@@ -4776,4 +4949,1339 @@ label{
     .classy-nav-container .classynav ul li a {
         color: #ffffff !important;
     }
+}
+
+/* Hero Redesign Styles */
+
+.welcome_area.demo2 {
+    
+    z-index: 1;
+    position: relative;
+    padding-top: 120px; /* Space for fixed header */
+}
+
+/* Typography */
+.hero-label {
+    color: #4A4A68;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-headline {
+    font-size: 64px;
+    font-weight: 800 !important; /* Force bold */
+    line-height: 1.1;
+    color: #000;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 991px) {
+    .hero-headline {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-headline {
+        font-size: 36px;
+    }
+}
+
+.welcome-content p {
+    font-size: 20px;
+    color: #4A4A68;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+/* Trusted By Section */
+.trusted-section {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.avatar-stack {
+    display: flex;
+    margin-right: 15px;
+}
+
+.avatar-stack .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #F0EEEB; /* Matches background */
+    margin-left: -10px;
+    background-color: #ddd;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-stack .avatar:first-child {
+    margin-left: 0;
+}
+
+.trusted-text {
+    font-weight: 600;
+    color: #1F1135;
+    font-size: 15px;
+}
+
+/* Right Column & Floating Cards */
+.banner-box.relative-box {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-resume-img {
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    max-height: 700px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.floating-card {
+    position: absolute;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+    max-width: 250px;
+}
+
+/* Card 1: Andrew Irwin */
+.floating-card.card-1 {
+    top: 20%;
+    left: -20px;
+    /* width: 220px; */
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #000;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: #FFB400;
+    font-size: 12px;
+}
+
+.platform-icon.p-icon {
+    width: 24px;
+    height: 24px;
+    background: #FF5722;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Card 2: TikTok */
+.floating-card.card-2 {
+    bottom: 10%;
+    right: -20px;
+    width: 260px;
+    animation-delay: 1s; /* Offset float */
+}
+
+/* Card 3: LinkedIn */
+.floating-card.card-3 {
+    bottom: 30%;
+    left: -30px;
+    width: 240px;
+    animation-delay: 2s;
+}
+
+.platform-icon.l-icon {
+    width: 24px;
+    height: 24px;
+    background: #0077b5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.tweet-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.tiktok-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #888;
+}
+
+.platform-icon.tiktok-icon svg {
+    fill: #000;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive Floating Cards */
+@media (max-width: 1200px) {
+    .floating-card.card-1 { left: -10px; }
+    .floating-card.card-2 { right: -10px; }
+}
+
+@media (max-width: 991px) {
+    .welcome_area {
+        padding-bottom: 50px;
+    }
+    
+    .trusted-section {
+        margin-bottom: 40px;
+    }
+    
+    .floating-card.card-1 {
+        top: 10%;
+        left: 0;
+    }
+    
+    .floating-card.card-2 {
+        bottom: 5%;
+        right: 0;
+    }
+
+    .floating-card.card-3 {
+        bottom: 35%;
+        left: 0;
+    }
+    
+    .hero-resume-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .floating-card {
+        display: block; /* Show cards */
+        transform: scale(0.75);
+        transform-origin: center;
+        padding: 10px;
+        z-index: 20; 
+        max-width: 220px;
+    }
+
+    .floating-card.card-1 {
+        top: 0%;
+        left: -10px;
+    }
+
+    .floating-card.card-2 {
+        bottom: 0%;
+        right: -10px;
+        width: 240px;
+    }
+
+    .floating-card.card-3 {
+        bottom: 45%;
+        left: -10px;
+    }
+    
+    .welcome-content {
+        text-align: center;
+    }
+    
+    .hero-headline {
+        margin-top: 10px;
+    }
+    
+    .trusted-section {
+        justify-content: center;
+    }
+    
+    .banner-box {
+        margin-top: 30px;
+    }
+}
+
+/* Problem/Empathy Section Styles */
+.problem_area {
+    background-color: transparent;
+    padding-bottom: 80px;
+}
+
+.problem-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    margin: 15px; /* Add unified margin for spacing */
+    border: 1px solid #eee;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Soft, modern shadow */
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+.problem-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #F4F6F8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.problem-emoji {
+    font-size: 30px;
+}
+
+.problem-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1F1135;
+}
+
+.problem-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Optional: Red accent for the second card */
+.problem-card.red-theme:hover .problem-icon-wrapper {
+    background: #FFEBEE;
+}
+
+/* Core Offer Section Styles */
+.core-offer-area {
+    position: relative;
+    z-index: 1;
+}
+
+.offer-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05); /* Very subtle border */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+/* Explicit Mobile Spacing Override in Main CSS */
+@media (max-width: 767px) {
+    /* Utility class for column spacing */
+    .mobile-card-spacer {
+        margin-bottom: 70px !important;
+    }
+
+    .offer-card, .offer-card-v2, .problem-card {
+        margin-bottom: 0px !important; /* Reset component margin as it's now on the col */
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 25px 20px !important; /* Reduced padding for mobile */
+        display: block; 
+    }
+    
+    .problem-title, .offer-card h4, .offer-content-v2 h4 {
+        font-size: 20px !important; /* Scaled down title */
+    }
+}
+
+.offer-icon {
+    margin-bottom: 25px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-icon img {
+    max-height: 70px;
+    width: auto;
+}
+
+.offer-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1F1135;
+}
+
+/* New V2 Card with spacing */
+.offer-card-v2 {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    margin: 15px; /* Added spacing around cards to avoid cluttering */
+    height: auto; /* Allow auto height with margin */
+}
+
+.offer-card-v2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+.offer-icon-v2 {
+    margin-bottom: 25px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-icon-v2 img {
+    max-height: 70px;
+    width: auto;
+}
+
+.offer-content-v2 h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1F1135;
+}
+
+
+/* Before/After Slider Section Styles */
+
+.before-after-slider-section {
+    position: relative;
+    z-index: 10;
+}
+
+.ba-interactive-widget {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Reduced from 600px to fit screen height better (approx 450x635px) */
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    background: #fff;
+    cursor: ew-resize; /* Indicate dragging */
+    user-select: none;
+    container-type: inline-size; /* For container queries */
+    touch-action: pan-y; /* Prevent vertical scroll interference, allow horizontal slider interaction */
+}
+
+/* Ensure Owl Carousel Dots are properly spaced below */
+.before-after-slides .owl-dots {
+    margin-top: 40px !important;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+    display: block !important; /* Force visibility */
+}
+
+.before-after-slides .owl-dot {
+    display: inline-block;
+    zoom: 1; /* IE fix */
+}
+
+.before-after-slides .owl-dot span {
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+}
+
+
+/* Authority Section Styles */
+.authority-area {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.authority-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1F1135;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.authority-desc {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Manifesto Section Styles */
+.manifesto-area {
+    background: transparent; /* Slight contrast from Authority */
+}
+
+.manifesto-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.manifesto-headline {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1F1135;
+    margin-bottom: 60px;
+    line-height: 1.3;
+    font-family: var(--font-primary);
+}
+
+.manifesto-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.manifesto-item {
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+}
+
+.manifesto-item.mute-text {
+    color: #ccc; /* Muted/Crossed out effect */
+    text-decoration: line-through; /* Strikethrough for "Not this" */
+    text-decoration-color: #e0e0e0;
+    text-decoration-thickness: 2px;
+}
+
+.manifesto-item.highlight-text {
+    color: var(--color-primary, #173187); /* Brand Color */
+    font-size: 32px; /* Slightly larger */
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .authority-title {
+        font-size: 28px;
+    }
+    .manifesto-headline {
+        font-size: 30px;
+    }
+    .manifesto-item {
+        font-size: 22px;
+    }
+    .manifesto-item.highlight-text {
+        font-size: 26px;
+    }
+}
+
+/* FAQ Section Styles */
+.faq-area {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-content {
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* Subtle separator */
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.faq-header {
+    padding: 25px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.faq-header h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F1135;
+    margin-bottom: 0;
+    padding-right: 20px;
+}
+
+.faq-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 300;
+    color: #1F1135;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-body p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding-right: 40px;
+}
+
+/* Active State */
+.faq-item.active .faq-header h5 {
+    color: var(--color-primary, #173187);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Rotate + to x */
+    color: var(--color-primary, #173187);
+}
+
+.ba-images-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 141%; /* Aspect ratio for resume paper (approx A4) */
+    overflow: hidden;
+}
+
+.ba-img-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed to cover to fill space */
+    object-position: top center;
+    filter: grayscale(100%) blur(1px); /* Visual distinction for "Before" */
+}
+
+/* After Image Wrapper - Overlay */
+.ba-after-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Initial width */
+    height: 100%;
+    overflow: hidden;
+    border-right: 2px solid #fff; /* White cut line */
+    z-index: 2;
+    background: transparent; 
+}
+
+.ba-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Force the image to always be the width of the main wiget container */
+    width: 450px; /* Fallback for older browsers */
+    width: 100cqw; /* 100% of container (widget) width */
+    max-width: none;
+    height: 100%;
+    object-fit: cover; /* Changed to cover to fill space */
+    object-position: top center;
+}
+
+/* On mobile where widget < 450px, we need the image to scale down. 
+   But since the wrapper is e.g. 50% width, width: 100% makes image 50% size.
+   We need width: 100vw (viewport width) constrained? No.
+   The robust CSS way for clipping without shrinking:
+   If we can't rely on cqw support everywhere yet or if it's failing:
+*/
+@supports not (container-type: inline-size) {
+    .ba-img-overlay {
+        width: 100vw; /* Fallback: make it big enough */
+        max-width: 450px; /* Cap at widget max-width */
+    }
+}
+
+/* Labels */
+.ba-before-label, .ba-after-label {
+    position: absolute;
+    top: 20px;
+    padding: 5px 12px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 5;
+    pointer-events: none;
+}
+.ba-before-label { right: 20px; }
+.ba-after-label { left: 20px; background: var(--color-primary, #173187); }
+
+/* Range Input (Invisible controller) */
+.ba-range-input {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height to allow dragging anywhere */
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 10;
+    cursor: ew-resize;
+    margin: 0;
+}
+
+/* Handle */
+.ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px; /* Hit area width */
+    transform: translateX(-50%);
+    z-index: 4;
+    pointer-events: none; /* Input handles interaction */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.handle-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.handle-circle {
+    width: 44px;
+    height: 44px;
+    background: var(--color-primary, #173187); /* Yves Blue */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+/* Content Side */
+.ba-content {
+    padding-left: 30px;
+}
+
+.ba-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.ba-feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.ba-feature-item i {
+    color: var(--color-primary); /* Success Green */
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.ba-feature-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1F1135;
+}
+
+.ba-feature-item p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .ba-content {
+        padding-left: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .ba-feature-item {
+        text-align: left; /* Keep feature text left-aligned for readability */
+        display: inline-flex; /* Center the whole block effectively while text is left */
+        width: 100%;
+        max-width: 400px;
+    }
+    .ba-interactive-widget {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Active Navigation Dot Styling */
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+    background: #1F1135 !important; /* Dark Navy */
+}
+
+/* =========================================
+   Refined Visual Hierarchy & Structure
+   ========================================= */
+
+/* Hero Section Refinements */
+.hero-headline {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1F1135; /* Dark Navy for authority */
+    margin-bottom: 20px;
+}
+
+.hero-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #173187; /* Accent Blue */
+    display: block;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: var(--color-text-body);
+}
+
+/* Outcome Emphasis - Section Headings */
+.section-heading h2 {
+    font-size: 3rem; /* Increase size */
+    font-weight: 700;
+    color: #1F1135;
+    margin-bottom: 20px;
+}
+
+/* Tighter Alignment & Spacing */
+.section-heading {
+    margin-bottom: 60px; /* Slight reduction for tighter feel */
+}
+
+/* Ensure Left Alignment in Hero */
+.welcome-content.v2 {
+    text-align: left;
+}
+
+/* Mobile Responsiveness for Hero Headline */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 3rem;
+    }
+}
+
+/* =========================================
+   Redesigned Core Offer Section (Reference Match)
+   ========================================= */
+
+.core-offer-area .section-heading-left h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--color-text-dark);
+}
+
+.core-offer-area .section-heading-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.offer-card-v2 {
+    border-radius: 30px;
+    padding: 30px;
+    height: 100%;
+    min-height: 320px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: default;
+    overflow: hidden;
+}
+
+.offer-card-v2:hover {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+/* Light Card Style (White/Light Gradient) */
+.offer-card-v2.light-card {
+    background: #fff;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7fc 100%);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* Primary Card Style (Purple/Blue Gradient) */
+.offer-card-v2.primary-card {
+    background: var(--color-primary);
+    background: linear-gradient(135deg, #8c7ae6 0%, #173187 100%); /* Purple to Blue */
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(23, 49, 135, 0.2);
+}
+
+.offer-card-v2.primary-card h4,
+.offer-card-v2.primary-card p {
+    color: #fff;
+}
+
+.offer-icon-v2 {
+    margin-bottom: 20px;
+}
+
+.offer-icon-v2 img {
+    width: 40px;
+    height: auto;
+}
+
+.offer-card-v2.primary-card .filter-white {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+
+.offer-content-v2 {
+    position: relative;
+    z-index: 2;
+}
+
+.offer-content-v2 h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.offer-content-v2 .offer-desc p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+/* Plus Icon */
+.offer-card-v2 .plus-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Specific layout adjustments for the "Plus" button position */
+.offer-content-v2 {
+    padding-right: 20px;
+}
+
+/* Responsive Stepped Cards */
+
+/* Default (Mobile/Tablet): All cards uniform height or stacked */
+.offer-card-v2 {
+    height: auto;
+    min-height: 320px; /* Keep reasonable default */
+}
+
+/* Desktop: Stepped Layout */
+@media (min-width: 992px) {
+    /* Small Card */
+    .offer-card-v2.card-sm {
+        height: 340px;
+    }
+
+    /* Medium Card */
+    .offer-card-v2.card-md {
+        height: 420px;
+    }
+
+    /* Large Card */
+    .offer-card-v2.card-lg {
+        height: 500px;
+    }
+
+    /* Ensure icons/content are positioned appropriately if fixed height */
+    .offer-card-v2 {
+        justify-content: space-between;
+    }
+}
+
+
+
+/* =========================================
+   New Contact Page Styles - Refined Design
+   ========================================= */
+
+.contact-hero-section {
+    padding: 180px 0 80px; /* Reduced bottom padding */
+    text-align: center;
+    /* background: #fff; */
+    position: relative;
+    z-index: 10;
+}
+
+/* Rounded Pill "Contact Us" Label */
+.contact-tag-pill {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50px;
+    font-size: 13px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.contact-hero-title {
+    font-size: 56px;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.contact-hero-desc {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.contact-hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Primary Blue Button */
+.btn-primary-blue {
+    background-color: #0066FF; /* Bright blue from reference */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary-blue:hover {
+    background-color: #0052cc;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+/* Secondary Outline Button */
+.btn-outline-blue {
+    background-color: transparent;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-blue:hover {
+    border-color: #0066FF;
+    color: #0066FF;
+}
+
+/* =========================================
+   Contact Main Section (Split Layout)
+   ========================================= */
+.contact-main-section {
+    padding: 80px 0;
+    /* background: #fff; */
+}
+
+.contact-split-title {
+    font-size: 36px;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+/* Left Column: Info */
+.contact-info-item {
+    margin-bottom: 30px;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-value {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-value-lg {
+    font-size: 20px;
+}
+
+.contact-social-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-social-links a {
+    color: #1a1a1a;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.contact-social-links a:hover {
+    color: #0066FF;
+}
+
+/* Right Column: Form */
+.new-contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.new-contact-form label {
+    font-size: 14px;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.new-contact-form .form-control {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px; /* Slightly rounded inputs */
+    padding: 15px 20px;
+    height: auto;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff; /* Keep white input background */
+    box-shadow: none;
+    transition: border-color 0.3s;
+}
+
+.new-contact-form .form-control:focus {
+    border-color: #0066FF;
+    outline: none;
+}
+
+.new-contact-form textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.new-contact-form .form-control::placeholder {
+    color: #bbb;
+}
+
+/* Full width submit button */
+.btn-block-submit {
+    width: 100%;
+    background-color: #0066FF;
+    color: #fff;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-block-submit:hover {
+    background-color: #0052cc;
+}
+
+/* =========================================
+   Map Section
+   ========================================= */
+.contact-map-section {
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px; /* Space before footer */
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 15px; /* gutter */
+}
+.map-inner {
+    width: 100%;
+    height: 100%;
+    background: url('../img/core-img/map.png') center/cover no-repeat; /* Placeholder if no image */
+    background-color: #e0e0e0; /* Fallback */
+    border-radius: 20px;
+    position: relative;
+}
+
+.map-inner iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 20px;
+}
+
+
+/* Mobile Responsiveness for Contact Page */
+@media (max-width: 991px) {
+    .contact-hero-title {
+        font-size: 40px;
+    }
+    .contact-main-section {
+        padding: 50px 0;
+    }
+    .contact-split-title {
+        margin-bottom: 30px;
+    }
+    .new-contact-form {
+        margin-top: 40px;
+    }
+}
+
+/* HireSpark Brand Outline Button */
+.btn-outline-hirespark {
+    position: relative;
+    z-index: 1;
+    min-width: 160px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--color-accent-dream-blue);
+    border: 1px solid var(--color-accent-dream-blue);
+    border-radius: 7px; /* Using 7px to match dream-btn specific style "not much rounded" */
+    transition: all 500ms;
+}
+
+.btn-outline-hirespark:hover {
+    background: var(--color-accent-dream-blue);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(82, 63, 225, 0.2); /* Approximating the blue shadow */
 }

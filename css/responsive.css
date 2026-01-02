@@ -85,12 +85,24 @@
     }
     .dream-btn {
         min-width: 130px;
-        padding: 0 20px;
+        padding: 10px 15px; /* Reduced vertical padding */
         font-size: 10px;
         margin-bottom: 15px; /* Added spacing for stacked buttons */
+        white-space: normal; /* Allow text wrapping */
+        line-height: 1.4; /* Improve readability when wrapped */
+        height: auto; /* Allow height to grow */
+        max-width: 100%; /* Prevent overflow */
+        display: inline-block; /* Ensure block model respects max-width */
     }
     .single_cool_fact {
         margin-bottom: 50px;
+    }
+
+    /* Mobile Card Spacing Fix */
+    .problem-card,
+    .offer-card-v2 {
+        margin-bottom: 60px !important; /* Increased from 30px to 60px */
+        margin-top: 15px !important; 
     }
     .classy-navbar {
         height: 60px;

@@ -19,60 +19,62 @@
 
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom_terms.css">
 
 </head>
 
 <body class="light-version">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="dream-load"></div>
-        </div>
-    </div>
+
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
-        <div class="classy-nav-container dark breakpoint-off">
-            <div class="container">
-                <!-- Classy Menu -->
-                <nav class="classy-navbar justify-content-between" id="dreamNav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/core-img/hire_spark_logo.png" alt="HireSpark Logo" style="max-height: 40px;">
+                    <span class="brand-text">Hire Spark</span>
+                </a>
 
-                    <!-- Logo -->
-                    <a class="nav-brand" href="#"><img src="img/core-img/hire_spark_logo.png" alt="logo">
-                        Hire Spark</a>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" id="mobileMenuTrigger">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
 
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Templates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                    <!-- CTA Button -->
+                    <a href="#" class="btn login-btn ml-3">Get Your Resume Rebuilt</a>
+                </div>
+            </nav>
+        </div>
 
-                    <!-- Menu -->
-                    <div class="classy-menu">
-
-                        <!-- close btn -->
-                        <!-- close btn -->
-                        <!-- <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div> -->
-
-                        <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul id="nav">
-                                <li><a href='#'>Home</a></li>
-                                <li><a href='#'>About Us</a></li>
-                                <li><a href='#'>Pricing</a></li>
-                                <li><a href='#'>How It Works</a></li>
-                                <li><a href='#'>FAQ</a></li>
-                                <li><a href='#'>Contact</a></li>
-                            </ul>
-
-                            <!-- Button -->
-                            <a href="#" class="open-popup-link btn login-btn mr-im">Get Your Resume
-                                Rebuilt</a>
-                        </div>
-                        <!-- Nav End -->
-                    </div>
-                </nav>
+        <!-- Mobile Menu Overlay (Custom Implementation for reliability) -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <div class="mobile-header">
+                    <span class="brand-text">Hire Spark</span>
+                    <div class="close-icon" id="mobileMenuClose">×</div>
+                </div>
+                <ul class="mobile-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn login-btn mobile-cta">Get Your Resume Rebuilt</a>
             </div>
         </div>
     </header>
@@ -88,28 +90,87 @@
                 <!-- Welcome Content -->
                 <div class="col-12 col-lg-6 col-md-12">
                     <div class="welcome-content v2">
-                        <div class="promo-section">
-                            <div class="integration-link light">
-                                <!-- <span class="integration-icon">
-                                    <img src="img/svg/img-dollar.svg" width="24" height="24" alt="">
-                                </span> -->
-                                <span class="integration-text">100% Human-Led Service. No AI Bots.</span>
+                        <h4 class="hero-label wow fadeInUp" data-wow-delay="0.1s">Professionally Written Resumes </h4>
+                        <h1 class="wow fadeInUp hero-headline" data-wow-delay="0.2s">Don’t apply. Get chosen.
+                        </h1>
+                        <p class="wow fadeInUp text-justify" data-wow-delay="0.3s">HireSpark helps job seekers stand out
+                            wher their
+                            experience isn't translating into interviews.
+                            Every resume, is rebuilt through a human-led process by experienced writers who understand
+                            res, really hiring standards.
+                            We focus on clear structure and strong position
+                        </p>
+                        <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="#" class="btn dream-btn cta-btn-v2 mr-3">Request a free Resume Diagnostic ✨</a>
+                            <label class="terms-text">* Free diagnostic review only.
+                                Due to demand, we can’t review every submission.
+                                If selected, you’ll hear back within 24–48 hours.</label>
+                        </div>
+
+                        <div class="hero-stats wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="stat-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Recruiter-Approved</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Interview-Focused</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa fa-check-circle"></i>
+                                <span>Role-Specific</span>
                             </div>
                         </div>
-                        <h1 class="wow fadeInUp" data-wow-delay="0.2s">Don’t Let a Weak Resume Bury Strong Experience.
-                        </h1>
-                        <p class="wow fadeInUp" data-wow-delay="0.3s">We fix the disconnect between your capabilities
-                            and your resume. Our experts manually review and rewrite your document to ensure your true
-                            value is obvious within seconds—no generic templates involved.</p>
-                        <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="#" class="btn dream-btn green-btn mr-3">GET YOUR RESUME REBUILT ($75)</a>
-                            <a href="#" class="btn dream-btn green-btn"> FREE QUICK REVIEW</a>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 col-md-12">
-                    <div class="banner-box">
-                        <img src="img/core-img/banner2.png" alt="">
+                    <div class="banner-box relative-box">
+                        <img src="img/demos/home_resume.jpg" class="hero-resume-img" alt="Resume Preview">
+
+                        <!-- Floating Card 1: Andrew Irwin -->
+                        <div class="floating-card card-1 wow fadeInRight" data-wow-delay="0.6s">
+                            <div class="card-content">
+                                <div class="user-info">
+                                    <h5 class="user-name">Andrew Irwin</h5>
+                                    <p class="user-role">Product Manager</p>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <div class="platform-icon p-icon">P</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Card 2: TikTok -->
+                        <div class="floating-card card-2 wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="card-content">
+                                <p class="tweet-text">Powerful websites I wish I knew earlier:<br>This one is a
+                                    <strong>LIFESAVER</strong> 😍
+                                </p>
+                                <div class="tiktok-meta">
+                                    <span class="tiktok-handle">@maedeh.davami | 1.8 million views</span>
+                                    <div class="platform-icon tiktok-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16"
+                                            height="16">
+                                            <path
+                                                d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Card 3: LinkedIn -->
+                        <div class="floating-card card-3 wow fadeInLeft" data-wow-delay="1.0s">
+                            <div class="card-content">
+                                <div class="user-info">
+                                    <h5 class="user-name">Sarah Jenkins</h5>
+                                    <p class="user-role">Software Engineer</p>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <div class="platform-icon l-icon">in</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -120,149 +181,141 @@
 
     <div class="clearfix"></div>
 
-    <section class="demo-video feat section-padding-100 bub-left">
+    <!-- ##### Problem/Empathy Area Start ##### -->
+    <section class="problem_area section-padding-70-70 relative">
         <div class="container">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="services-block-four">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/icons/d1.png" alt="">
-                            </div>
-                            <h3><a href="#">Zero Automation</a></h3>
-                            <div class="text">We don't use AI bots or generic templates. Every word is written by a
-                                professional to ensure nuance and authenticity.</div>
-
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="section-heading text-center">
+                        <h2 class="bold mb-4 wow fadeInUp" data-wow-delay="0.3s">The hiring process is broken.
+                            <br>Your resume shouldn't be.
+                        </h2>
+                        <p class="mb-0 wow fadeInUp" data-wow-delay="0.4s">You spend hours applying, but the results
+                            don't match
+                            your effort.</p>
                     </div>
-                    <div class="services-block-four">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/icons/d2.png" alt="">
-                            </div>
-                            <h3><a href="#">Strategic Positioning</a></h3>
-                            <div class="text">We don't just fix grammar. We restructure your narrative to highlight
-                                leadership, impact, and decision-making.</div>
-
-                        </div>
-                    </div>
-                    <div class="services-block-four" style="margin-bottom:0">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/icons/d3.png" alt="">
-                            </div>
-                            <h3><a href="#">Impact Over Fluff</a></h3>
-                            <div class="text">We cut the vague buzzwords. We focus on clarity and scan-ability so
-                                recruiters see your value in seconds.</div>
-
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="who-we-contant mt-s">
-                        <div class="dream-dots">
-                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Single Problem Card -->
+                <div class="col-12 col-md-6 col-lg-5 mobile-card-spacer">
+                    <div class="problem-card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="problem-icon-wrapper">
+                            <span class="problem-emoji">😓</span>
                         </div>
-                        <h4>Why Choose HireSpark?</h4>
-                        <p>Most resume tools rely on algorithms to fill in the blanks. We don’t. We believe your career
-                            history is too complex for a template.</p>
-                        <p>We built HireSpark to fix the disconnect between capable professionals and the resumes that
-                            hold them back. Our team manually dissects your experience to find the achievements that
-                            actually matter to hiring managers, ensuring you stop getting overlooked.</p>
-                        <a class='btn dream-btn mt-30' href='#'>START YOUR REBUILD</a>
+                        <h4 class="problem-title">Why you feel stuck</h4>
+                        <p class="problem-desc">You spend hours fighting with margins and spacing in Word, tweaking
+                            every bullet point. </p>
+                    </div>
+                </div>
+
+                <!-- Single Problem Card -->
+                <div class="col-12 col-md-6 col-lg-5 mobile-card-spacer">
+                    <div class="problem-card wow red-theme fadeInUp" data-wow-delay="0.4s">
+                        <div class="problem-icon-wrapper">
+                            <span class="problem-emoji">🤖</span>
+                        </div>
+                        <h4 class="problem-title">Why generic resumes fail</h4>
+                        <p class="problem-desc">Recruiters scan resumes in 6 seconds. If yours looks like a generic
+                            template, it gets treated like one. </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ##### Problem/Empathy Area End ##### -->
 
-
-
-    <!-- ##### About Us Area Start ##### -->
-    <section class="about-us-area section-padding-100 clearfix">
+    <!-- ##### Manifesto (What We Do) Section Start ##### -->
+    <section class="manifesto-area section-padding-70-70">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 text-center">
+                    <div class="manifesto-label wow fadeInUp" data-wow-delay="0.2s">WHAT WE DO</div>
+                    <h2 class="manifesto-headline wow fadeInUp" data-wow-delay="0.3s">HireSpark rebuilds resumes for
+                        professionals who want to be taken seriously.</h2>
 
-                <div class="col-12 col-lg-6">
-                    <div class="who-we-contant">
-                        <div class="dream-dots">
-                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <h4 class="bold">Why Talented People Get Overlooked</h4>
-                        <div class="list-wrap align-items-center">
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>Strong Experience, Weak Framing:</b> You have the
-                                            skills,
-                                            but your resume buries them under vague language and passive formatting.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>The Template Trap:</b> Generic templates make you
-                                            look like everyone else. If your resume looks like a template, it gets
-                                            treated like one.</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>Duties vs. Impact:</b> Most resumes list
-                                            responsibilities (what you were told to do) instead of achievements (what
-                                            you actually delivered).</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>The AI Disconnect:</b> Automated builders and AI
-                                            tools lack the nuance to explain complex career gaps or pivot stories.</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>Underselling Seniority:</b> It is surprisingly hard
-                                            to write about yourself. Senior experts often undersell their leadership
-                                            without realizing it.</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="side-feature-list-item">
-                                        <img src="img/icons/check.png" class="check-mark-icon" alt="">
-                                        <div class="foot-c-info"><b>The "Application Black Hole":</b> Applying to dozens
-                                            of roles without a callback isn't a bad luck streak—it's usually a
-                                            positioning problem.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6">
-                    <div class="welcome-meter wow fadeInUp mt-s" data-wow-delay="0.3s">
-                        <img src="img/core-img/cv.png" class="center-block" alt="Hand-Crafted Strategy">
+                    <div class="manifesto-list wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="manifesto-item mute-text">This is not editing.</div>
+                        <div class="manifesto-item mute-text">This is not formatting.</div>
+                        <div class="manifesto-item highlight-text">This is positioning.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ##### About Us Area End ##### -->
+    <!-- ##### Manifesto Section End ##### -->
 
-    <div class="clearfix"></div>
+    <!-- ##### Core Offer Area Start ##### -->
+    <section class="core-offer-area section-padding-70-70">
+        <div class="container">
+            <!-- Centered Section Heading -->
+            <div class="section-heading text-center">
+                <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <h2 class="wow fadeInUp bold mb-4" data-wow-delay="0.3s">The Human Advantage</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.4s">While others rely on speed and automation, we rely on
+                    strategy and craft.</p>
+            </div>
+
+            <div class="row align-items-end">
+                <!-- Feature 1 (Small) -->
+                <div class="col-12 col-md-4">
+                    <div class="offer-card-v2 light-card card-sm wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="offer-icon-v2">
+                            <img src="img/icons/f1.png" alt="Manual Process">
+                        </div>
+                        <div class="offer-content-v2">
+                            <h4>100% Manual Writing</h4>
+                            <div class="offer-desc">
+                                <p>No AI generators. No copy-paste templates.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 (Medium) -->
+                <div class="col-12 col-md-4">
+                    <div class="offer-card-v2 primary-card card-md wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="offer-icon-v2">
+                            <img src="img/icons/f2.png" alt="Human Judgment" class="filter-white">
+                        </div>
+                        <div class="offer-content-v2">
+                            <h4>Strategic Human Judgment</h4>
+                            <div class="offer-desc">
+                                <p>We decide exactly which achievements to highlight.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 (Large) -->
+                <div class="col-12 col-md-4">
+                    <div class="offer-card-v2 light-card card-lg wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="offer-icon-v2">
+                            <img src="img/icons/f3.png" alt="Craft and Care">
+                        </div>
+                        <div class="offer-content-v2">
+                            <h4>Narrative Over Keywords</h4>
+                            <div class="offer-desc">
+                                <p>We craft a compelling story that connects your past experience to your future role.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Core Offer Area End ##### -->
+
+
     <!-- ##### How It Works Area Start ##### -->
-    <section class="how-it-works-section section-padding-100" id="how-it-works">
+    <section class="how-it-works-section section-padding-70-70" id="how-it-works">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
@@ -278,9 +331,8 @@
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">01</div>
-                        <h4 class="hiw-step-title">Secure Your Slot</h4>
-                        <p class="hiw-step-desc">Select your service and complete the secure checkout via Stripe. This
-                            immediately reserves your spot in our work queue.</p>
+                        <h4 class="hiw-step-title">Purchase your resume rebuild</h4>
+                        <p class="hiw-step-desc">Secure checkout to reserve your slot.</p>
                     </div>
                 </div>
                 <!-- Empty Col for ZigZag -->
@@ -291,9 +343,8 @@
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">02</div>
-                        <h4 class="hiw-step-title">Submit Your Context</h4>
-                        <p class="hiw-step-desc">After payment, you’ll be guided to a simple intake form. Upload your
-                            current resume and tell us your target role so we know exactly how to position you.</p>
+                        <h4 class="hiw-step-title">Submit your details</h4>
+                        <p class="hiw-step-desc">Upload your resume, target role, and context.</p>
                     </div>
                 </div>
 
@@ -301,9 +352,9 @@
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">03</div>
-                        <h4 class="hiw-step-title">We Rebuild Manually</h4>
-                        <p class="hiw-step-desc">Our experts review your history and write your resume from scratch. We
-                            focus on structure, clarity, and impact—removing the fluff that gets you ignored.</p>
+                        <h4 class="hiw-step-title">We rebuild your resume</h4>
+                        <p class="hiw-step-desc">Reviewed and rewritten manually by professionals.
+                        </p>
                     </div>
                 </div>
                 <!-- Empty Col -->
@@ -314,9 +365,10 @@
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">04</div>
-                        <h4 class="hiw-step-title">Receive via Email</h4>
-                        <p class="hiw-step-desc">You will receive your fully rebuilt resume directly in your inbox
-                            within 48–72 hours. Need a tweak? Just reply to the email and we’ll refine it.</p>
+                        <h4 class="hiw-step-title">Receive by email</h4>
+                        <p class="hiw-step-desc">Delivered within 48–72 hours.
+                            Minor tweaks handled via email.
+                        </p>
                     </div>
                 </div>
 
@@ -329,125 +381,169 @@
     </section>
     <!-- ##### How It Works Area End ##### -->
 
-    <!-- ##### How It Works Area End ##### -->
-
-    <!-- ##### Before/After Area Start ##### -->
-    <section class="before-after-section section-padding-100-70">
+    <!-- ##### Before/After Slider Area Start ##### -->
+    <section class="before-after-slider-section section-padding-70-70" style="background: transparent;">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                 </div>
-                <h2 class="wow fadeInUp" data-wow-delay="0.3s">See the Difference Clarity Makes</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.4s">We don’t just change the font. We change the narrative.
-                    See how we transform a cluttered list of duties into a high-impact career story.</p>
+                <h2 class="wow fadeInUp" data-wow-delay="0.3s">See the Transformation</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.4s">Drag the slider to see how we turn standard resumes into
+                    job-winning documents.</p>
             </div>
 
-            <div class="before-after-slides owl-carousel">
+            <div class="before-after-slides owl-carousel wow fadeInUp" data-wow-delay="0.5s">
 
                 <!-- Slide 1 -->
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label before">BEFORE</span>
-                            <div class="ba-img-wrapper before">
-                                <img src="img/demos/demo-1.png" alt="Before Resume Sample 1">
-                            </div>
-                            <div class="ba-caption before">
-                                <h5>The "Task List" Resume</h5>
-                                <ul>
-                                    <li><strong>The Problem:</strong> Buried achievements and dense walls of text.</li>
-                                    <li><strong>The Impression:</strong> Focuses on *what you did* rather than *how well
-                                        you did it*.</li>
-                                </ul>
+                <div class="single-ba-slide">
+                    <div class="row align-items-center">
+                        <!-- Slider Widget -->
+                        <div class="col-12 col-lg-7">
+                            <div class="ba-interactive-widget">
+                                <div class="ba-images-container">
+                                    <!-- Before Image (Background) -->
+                                    <div class="ba-before-label">Before</div>
+                                    <img src="img/demos/demo-1.png" class="ba-img-base" alt="Before">
+
+                                    <!-- After Image (Clipped) -->
+                                    <div class="ba-after-img-wrapper" style="width: 50%;">
+                                        <div class="ba-after-label">After</div>
+                                        <img src="img/demos/demo-1.png" class="ba-img-overlay" alt="After">
+                                        <!-- Using same img but will style differently for demo if needed, or user needs to provide pair -->
+                                    </div>
+                                </div>
+                                <!-- Range Input -->
+                                <input type="range" min="0" max="100" value="50" class="ba-range-input"
+                                    oninput="updateBASlider(this)">
+                                <!-- Handle -->
+                                <div class="ba-handle" style="left: 50%;">
+                                    <div class="handle-line"></div>
+                                    <div class="handle-circle"><i class="fa fa-arrows-h"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label after">AFTER</span>
-                            <div class="ba-img-wrapper after">
-                                <img src="img/demos/demo-1.png" alt="After Resume Sample 1">
-                            </div>
-                            <div class="ba-caption after">
-                                <h5>The "Strategic" Rebuild</h5>
-                                <ul>
-                                    <li><strong>The Solution:</strong> Clear hierarchy, quantified results, and strong
-                                        action verbs.</li>
-                                    <li><strong>The Impression:</strong> Immediately positions the candidate as an
-                                        achiever.</li>
-                                </ul>
+
+                        <!-- Content -->
+                        <div class="col-12 col-lg-5">
+                            <div class="ba-content">
+                                <h3 class="ba-title">Finance Professional</h3>
+                                <div class="ba-features">
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Optimized Format</h5>
+                                            <p>Clean, modern layout that guides the recruiter's eye.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Quantified Impact</h5>
+                                            <p>Replaced "responsible for" with hard numbers and results.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>ATS Compatible</h5>
+                                            <p>Parsed correctly by screening software.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label before">BEFORE</span>
-                            <div class="ba-img-wrapper before">
-                                <img src="img/demos/demo-2.png" alt="Before Resume Sample 2">
-                            </div>
-                            <div class="ba-caption before">
-                                <h5>Generic Template</h5>
-                                <ul>
-                                    <li><strong>The Problem:</strong> Looks like everyone else's. Hidden value.</li>
-                                    <li><strong>The Impression:</strong> Lacks personality and strategic positioning.
-                                    </li>
-                                </ul>
+                <div class="single-ba-slide">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <div class="ba-interactive-widget">
+                                <div class="ba-images-container">
+                                    <div class="ba-before-label">Before</div>
+                                    <img src="img/demos/demo-2.png" class="ba-img-base" alt="Before">
+                                    <div class="ba-after-img-wrapper" style="width: 50%;">
+                                        <div class="ba-after-label">After</div>
+                                        <img src="img/demos/demo-2.png" class="ba-img-overlay" alt="After">
+                                    </div>
+                                </div>
+                                <input type="range" min="0" max="100" value="50" class="ba-range-input"
+                                    oninput="updateBASlider(this)">
+                                <div class="ba-handle" style="left: 50%;">
+                                    <div class="handle-line"></div>
+                                    <div class="handle-circle"><i class="fa fa-arrows-h"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label after">AFTER</span>
-                            <div class="ba-img-wrapper after">
-                                <img src="img/demos/demo-2.png" alt="After Resume Sample 2">
-                            </div>
-                            <div class="ba-caption after">
-                                <h5>Custom Narrative</h5>
-                                <ul>
-                                    <li><strong>The Solution:</strong> Unique layout that guides the eye to key wins.
-                                    </li>
-                                    <li><strong>The Impression:</strong> Professional, distinct, and memorable.</li>
-                                </ul>
+                        <div class="col-12 col-lg-5">
+                            <div class="ba-content">
+                                <h3 class="ba-title">Tech & Engineering</h3>
+                                <div class="ba-features">
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Technical Skills Highlight</h5>
+                                            <p>Strategically placed skills section for quick scanning.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Project Showcase</h5>
+                                            <p>Detailed project blocks with links to GitHub/Live demos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label before">BEFORE</span>
-                            <div class="ba-img-wrapper before">
-                                <img src="img/demos/demo-3.png" alt="Before Resume Sample 3">
-                            </div>
-                            <div class="ba-caption before">
-                                <h5>Passive Language</h5>
-                                <ul>
-                                    <li><strong>The Problem:</strong> "Responsible for..." statements. No impact.</li>
-                                    <li><strong>The Impression:</strong> Doer, not a leader. average performance.</li>
-                                </ul>
+                <div class="single-ba-slide">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <div class="ba-interactive-widget">
+                                <div class="ba-images-container">
+                                    <div class="ba-before-label">Before</div>
+                                    <img src="img/demos/demo-3.png" class="ba-img-base" alt="Before">
+                                    <div class="ba-after-img-wrapper" style="width: 50%;">
+                                        <div class="ba-after-label">After</div>
+                                        <img src="img/demos/demo-3.png" class="ba-img-overlay" alt="After">
+                                    </div>
+                                </div>
+                                <input type="range" min="0" max="100" value="50" class="ba-range-input"
+                                    oninput="updateBASlider(this)">
+                                <div class="ba-handle" style="left: 50%;">
+                                    <div class="handle-line"></div>
+                                    <div class="handle-circle"><i class="fa fa-arrows-h"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="ba-sample-box">
-                            <span class="ba-label after">AFTER</span>
-                            <div class="ba-img-wrapper after">
-                                <img src="img/demos/demo-3.png" alt="After Resume Sample 3">
-                            </div>
-                            <div class="ba-caption after">
-                                <h5>Action-Oriented</h5>
-                                <ul>
-                                    <li><strong>The Solution:</strong> "Led," "Created," "Improved" + Metrics.</li>
-                                    <li><strong>The Impression:</strong> High-impact contributor who delivers results.
-                                    </li>
-                                </ul>
+                        <div class="col-12 col-lg-5">
+                            <div class="ba-content">
+                                <h3 class="ba-title">Creative & Design</h3>
+                                <div class="ba-features">
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Portfolio Integration</h5>
+                                            <p>Seamless links to your portfolio work.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Visual Hierarchy</h5>
+                                            <p>Uses typography and spacing to create a strong visual impact.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
                             </div>
                         </div>
                     </div>
@@ -455,77 +551,61 @@
 
             </div>
         </div>
+
+        <!-- Inline Script for Slider Logic (to ensure immediate availability) -->
+        <script>
+            function updateBASlider(input) {
+                var widget = input.closest('.ba-interactive-widget');
+                var value = input.value;
+                var afterWrapper = widget.querySelector('.ba-after-img-wrapper');
+                var handle = widget.querySelector('.ba-handle');
+
+                afterWrapper.style.width = value + '%';
+                handle.style.left = value + '%';
+            }
+
+            // Prevent Owl Carousel swipe when dragging the range input
+            document.addEventListener('DOMContentLoaded', function () {
+                var rangeInputs = document.querySelectorAll('.ba-range-input');
+                rangeInputs.forEach(function (input) {
+                    // Only stop touchmove and mousemove primarily to prevent drag interference
+                    // We allow mouseenter/leave to bubble so the carousel knows to pause
+                    ['touchmove', 'mousemove'].forEach(function (evt) {
+                        input.addEventListener(evt, function (e) {
+                            e.stopPropagation();
+                        }, { passive: true });
+                    });
+
+                    // Stop start events to prevent swipe initiation
+                    ['touchstart', 'mousedown'].forEach(function (evt) {
+                        input.addEventListener(evt, function (e) {
+                            e.stopPropagation();
+                        }, { passive: true });
+                    });
+                });
+            });
+        </script>
     </section>
-    <!-- ##### Before/After Area End ##### -->
-
-    <!-- ##### Our features Area Start ##### -->
-    <section class="our_services_area section-padding-100-70" id="services">
-        <div class="container">
-
-            <div class="section-heading text-center">
-                <!-- Dream Dots -->
-                <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
-                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <h2 class="wow fadeInUp" data-wow-delay="0.3s">The Human Advantage</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.4s">While others rely on speed and automation, we rely on
-                    strategy and craft. We believe your career history is too complex for a template, so we build every
-                    resume by hand.</p>
-            </div>
+    <!-- ##### Before/After Slider Area End ##### -->
 
 
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <!-- Content -->
-                    <div class="service_single_content text-center mb-100 wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Icon -->
-                        <div class="service_icon">
-                            <img src="img/icons/f1.png" alt="">
-                        </div>
-                        <h6>100% Manual Writing</h6>
-                        <p>No AI generators. No copy-paste templates. A real expert writes your resume word-for-word to
-                            ensure the flow, tone, and narrative are unique to you.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <!-- Content -->
-                    <div class="service_single_content text-center mb-100 wow wow fadeInUp" data-wow-delay="0.3s">
-                        <!-- Icon -->
-                        <div class="service_icon">
-                            <img src="img/icons/f2.png" alt="">
-                        </div>
-                        <h6>Strategic Human Judgment</h6>
-                        <p>Algorithms can’t understand nuance. We use human judgment to decide exactly which
-                            achievements to highlight and which gaps to explain.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <!-- Content -->
-                    <div class="service_single_content text-center mb-100 wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Icon -->
-                        <div class="service_icon">
-                            <img src="img/icons/f3.png" alt="">
-                        </div>
-                        <h6>Narrative Over Keywords</h6>
-                        <p>We don't just stuff keywords to please a bot. We craft a compelling story that connects your
-                            past experience to the role you want next.</p>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- ##### Our features Area End ##### -->
+
+
+
+
+
     <!-- ##### Area start ##### -->
-    <section class="container section-padding-0-100">
+    <section class="container section-padding-70-100">
         <div class="subscribe">
             <div class="row align-items-center relative">
                 <img src="img/core-img/custom.png" alt="" class="custom">
                 <div class="col-lg-5 col-lg-offset-3 col-md-9 col-xs-12">
-                    <h2 class="bold mb-0">Do you Need a Complete Custom CV Template?</h2>
+                    <h2 class="bold mb-0">Select priority delivery for 24–48 hour turnaround.</h2>
                 </div>
                 <div class="col-lg-3 col-lg-offset-1 col-md-3 col-sm-12 text-center">
-                    <a class='button mt-s' href='#'>Send a Request</a>
+                    <a class='button mt-s' href='#'>Need it faster?
+                    </a>
                 </div>
 
             </div>
@@ -697,44 +777,46 @@
                 <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
                     <dl class="accordion wow fadeInUp" data-wow-delay="0.2s">
 
-                        <dt>Do you guarantee that I will get a job or an interview?</dt>
+                        <dt>What does HireSpark do?</dt>
                         <dd>
-                            We don’t guarantee jobs or offers. Hiring decisions are always up to the employer, and
-                            results depend on factors like how often someone applies, the roles they target, and the
-                            market they’re in.<br><br>
-                            What we <strong>do</strong> guarantee is high-quality, human-written work that clearly
-                            positions a client’s experience and strengths. In practice, many clients who were getting
-                            little to no callbacks before usually start seeing responses within weeks after a rebuild.
-                            That’s a pattern we see often, but timelines and outcomes can vary.
+                            HireSpark rebuilds resumes from scratch for professionals who want to be taken seriously in
+                            competitive hiring markets. We focus on positioning, structure, clarity, and seniority
+                            rather than simple edits or formatting.
                         </dd>
 
-                        <dt>Is this an AI tool or an automated builder?</dt>
-                        <dd>No. HireSpark is a human-led resume writing service, not an automated tool. Every resume is
-                            reviewed and rewritten manually based on experience, positioning, and real hiring patterns.
+                        <dt>Who is this service for?</dt>
+                        <dd>This service is designed for professionals, specialists, and leaders who are not getting the
+                            response they expect from their applications, despite strong experience.
                         </dd>
 
-                        <dt>How long does it take to get my resume?</dt>
-                        <dd>Typical turnaround for paid services is <strong>48–72 hours</strong> after form submission,
-                            depending on volume.</dd>
+                        <dt>What is the difference between a resume review and a full rebuild?</dt>
+                        <dd>The resume review is a short diagnostic assessment that highlights what is holding a resume
+                            back and whether a rebuild is necessary. A full rebuild is a complete rewrite and
+                            restructuring of the resume from the ground up.</dd>
 
-                        <dt>What if I am not happy with the result?</dt>
-                        <dd>If a client is not 100% happy with the final result, they can contact support to request
-                            tweaks or adjustments so the resume fully reflects their experience and goals.</dd>
+                        <dt>What does “resume rebuild” mean?</dt>
+                        <dd>A resume rebuild means your resume is rewritten entirely. Content, structure, bullet points,
+                            hierarchy, and positioning are reworked to reflect your true level, impact, and scope of
+                            responsibility.</dd>
 
-                        <dt>Is my personal data safe?</dt>
-                        <dd>Yes. All resumes and personal information are handled securely and are not shared with third
-                            parties. Submitted files may be deleted automatically after a set period for privacy.</dd>
+                        <dt>What is the turnaround time?</dt>
+                        <dd>Delivery is typically within 48–72 hours after all required information is submitted.</dd>
 
-                        <dt>Who is this service NOT for?</dt>
-                        <dd>This service may not be a fit if you’re looking for guaranteed outcomes, instant results, or
-                            a fully automated tool.</dd>
+                        <dt>How does the process work?</dt>
+                        <dd>After purchase, clients complete a short form and upload their current resume. Our team then
+                            rebuilds the resume and delivers the final version by email.</dd>
 
-                        <dt>What do I need to provide?</dt>
-                        <dd>Final results depend on the accuracy and completeness of the information provided by the
-                            client. Clients are responsible for submitting correct and up-to-date details during the
-                            intake process.</dd>
+                        <dt>What files do I receive?</dt>
+                        <dd>Clients receive a clean, professional PDF resume. In some cases, an editable version may
+                            also be included for minor updates.</dd>
+
+                        <dt>How can I contact support?</dt>
+                        <dd>You can contact us by email, and we usually respond quickly.</dd>
 
                     </dl>
+                </div>
+                <div class="col-12 text-center mt-50 wow fadeInUp" data-wow-delay="0.4s">
+                    <a class="btn dream-btn" href="#">See All FAQs</a>
                 </div>
             </div>
         </div>
@@ -841,8 +923,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="js/plugins.js"></script>
-    <script src="js/particles.html"></script>
-    <script src="js/app.html"></script>
+
     <!-- Parallax js -->
     <script src="js/dzsparallaxer.js"></script>
 

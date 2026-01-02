@@ -73,6 +73,7 @@
             },
             loop: true,
             autoplay: true,
+            autoplayHoverPause: true, // Added pause on hover
             smartSpeed: 700,
             dots: true,
             onInitialized: numberDots,
@@ -227,9 +228,28 @@
         });
     }
 
-    // :: niceScroll Active Code
-    if ($.fn.niceScroll) {
-        $(".timelineBody").niceScroll();
-    }
+
+
+    // :: Sticky Navbar (FlowCV Style)
+    $window.on('scroll', function () {
+        if ($window.scrollTop() > 50) {
+            $('.header-area').addClass('sticky');
+        } else {
+            $('.header-area').removeClass('sticky');
+        }
+    });
+
+    // :: Custom Mobile Menu Handlers
+    $('#mobileMenuTrigger').on('click', function(e) {
+        e.preventDefault();
+        $('#mobileMenu').addClass('active');
+    });
+
+    $('#mobileMenuClose, .mobile-menu-overlay').on('click', function(e) {
+        // Close if clicking close button OR the backdrop (but not the menu content itself)
+        if (e.target === this || e.target.id === 'mobileMenuClose' || $(e.target).hasClass('close-icon')) {
+             $('#mobileMenu').removeClass('active');
+        }
+    });
 
 })(jQuery);
