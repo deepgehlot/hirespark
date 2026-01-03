@@ -5200,7 +5200,7 @@ label{
     }
     
     .hero-resume-img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
     }
 }
@@ -6378,3 +6378,4 @@ label{
     margin-bottom: 20px;
     opacity: 1;
 }
+
