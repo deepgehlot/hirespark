@@ -178,6 +178,11 @@
     .sidebar-area {
         margin-top: 100px;
     }
+    
+    /* Global Padding Reset for Mobile */
+    section, [class*="section-padding"] {
+        padding-bottom: 0 !important;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {

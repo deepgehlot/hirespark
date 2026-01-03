@@ -1069,7 +1069,7 @@ html, body {
 .welcome-content {
     position: relative;
     z-index: 1;
-    margin-top: 140px; /* Increased from 90px to clear floating navbar */
+     /* Increased from 90px to clear floating navbar */
 }
 
 .promo-section {
@@ -3135,12 +3135,13 @@ p.artficial:before{
     margin: 0 15px;
     overflow: hidden;
     padding: 30px 20px;
-    background: #fff;
+    background: #173187
+s;
 }
 .icon_wrapper:after {
     content: '';
     border-right: 100px solid transparent;
-    border-top: 100px solid #173187
+    border-top: 100px solid #ffffff
 ;
     position: absolute;
     left: 0px;
@@ -6284,4 +6285,93 @@ label{
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(82, 63, 225, 0.2); /* Approximating the blue shadow */
+}
+
+
+.hero-headline {
+    margin-bottom: 15px !important; /* Visual Hierarchy: Reduce space below headline */
+}
+
+/* Tighter Trust/Credibility Section */
+.hero-stats {
+    margin-top: 30px !important; /* Reduced from default spacing if any */
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.05); /* Subtle visual separation */
+}
+
+.hero-stats .stat-item {
+    margin-bottom: 5px; /* Tighter list */
+}
+
+/* Service Sections: Better Flow */
+.manifesto-area.section-padding-70-70,
+.how-it-works-section.section-padding-70-70 {
+    padding-top: 50px; /* Reduced padding */
+    padding-bottom: 50px;
+}
+
+/* Reviews / Social Proof: Stronger Visual Weight */
+.clients_testimonials_area {
+    background-color: #f9f9fd; /* Slight tint to distinguish */
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Global Spacing Refinements */
+.section-heading {
+    margin-bottom: 50px; /* Reduced from 80px */
+}
+
+/* Specific Tweak for Manifesto List spacing */
+.manifesto-list .manifesto-item {
+    margin-bottom: 10px;
+}
+
+/* Testimonial Pagination Dots Spacing */
+.client_slides .owl-dots {
+    margin-bottom: 30px !important; /* Add space below dots */
+    margin-top: 20px; /* Ensure space above dots too */
+}
+
+/* Dark Testimonial Cards */
+.single-testimonial {
+    background-color: #173187; /* Dark Navy */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 15px; /* Add some margin around card */
+    transition: transform 0.3s ease;
+}
+
+.single-testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.single-testimonial .testimonial_text p {
+    color: #e0e0e0; /* Light gray text */
+    font-size: 16px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.single-testimonial .admin_text h5 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.single-testimonial .admin_text p {
+    color: #8c7ae6; /* Violet accent or primary color */
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.single-testimonial .icon_wrapper i {
+    color: #173187;
+    font-size: 30px;
+    margin-bottom: 20px;
+    opacity: 1;
 }
