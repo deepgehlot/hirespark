@@ -5982,24 +5982,24 @@ label{
 /* Default (Mobile/Tablet): All cards uniform height or stacked */
 .offer-card-v2 {
     height: auto;
-    min-height: 320px; /* Keep reasonable default */
+    min-height: 280px; /* Keep reasonable default */
 }
 
 /* Desktop: Stepped Layout */
 @media (min-width: 992px) {
     /* Small Card */
     .offer-card-v2.card-sm {
-        height: 340px;
+        height: 300px;
     }
 
     /* Medium Card */
     .offer-card-v2.card-md {
-        height: 420px;
+        height: 300px;
     }
 
     /* Large Card */
     .offer-card-v2.card-lg {
-        height: 500px;
+        height: 400px;
     }
 
     /* Ensure icons/content are positioned appropriately if fixed height */

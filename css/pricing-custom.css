@@ -1,0 +1,73 @@
+
+/* Pricing Card Adjustments */
+.offer-card-v2 {
+    position: relative;
+    height: 100%;
+    overflow: hidden; /* Ensures the corner price doesn't overflow if we used a transform, but mainly keeps clean edges */
+    transition: transform 0.3s ease;
+}
+
+.offer-card-v2:hover {
+    transform: translateY(-5px);
+}
+
+/* Corner Price Styling */
+.corner-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 25px 50px;
+    border-radius: 0 0 0 30px; /* Curve on bottom-left corner */
+    z-index: 10;
+}
+
+.corner-price h3 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Specific Colors for Light Card */
+.light-card .corner-price {
+    background: linear-gradient(135deg, #8c7ae6 0%, #173187 100%); /* Use primary color for the bg */
+    color: #fff;
+}
+
+/* Specific Colors for Primary Card */
+.primary-card .corner-price {
+    background-color: #fff;
+    color: var(--color-primary); /* Use primary color for the text */
+}
+
+/* Adjust Content Padding since Price is absolute */
+.offer-content-v2 {
+    padding-top: 40px; /* Add some space at the top so title doesn't hit the price area if it's wide, though text-center helps */
+}
+
+/* Responsive Spacing utility */
+@media (max-width: 767px) {
+    .mb-responsive {
+        margin-bottom: 30px;
+    }
+}
+
+/* Demo Slider Dots Styling */
+.demo-slides .owl-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.demo-slides .owl-dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background: #dde2e6;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.demo-slides .owl-dot.active {
+    background: var(--color-primary); /* Or specific color if needed */
+    transform: scale(1.2);
+}
