@@ -81,7 +81,7 @@
 }
 .other-accounts .footer-social-info a i{
     font-size: 14px;
-    background: #fff;
+    background: var(--bg-card);
     color: var(--color-accent-blue);
     width: 30px;
     height: 30px;
@@ -99,7 +99,8 @@
 body {
     font-family: var(--font-primary);
     overflow-x: hidden;
-
+    background-color: var(--bg-body); /* Added for dark mode */
+    color: var(--color-text-body);
 }
 .darker-blue{
     background: linear-gradient(180deg,#240044 0,#0f0240 25%,#400959 40%,#0f0240 65%,#0f0240);
@@ -113,6 +114,16 @@ h6 {
     font-family: var(--font-primary);
     line-height: 1.4;
     font-weight: 500;
+    color: var(--color-heading-custom);
+}
+
+body.dark-version h1,
+body.dark-version h2,
+body.dark-version h3,
+body.dark-version h4,
+body.dark-version h5,
+body.dark-version h6 {
+    color: var(--color-heading-custom);
 }
 .clear-fix{clear: both}
 a,
@@ -551,7 +562,7 @@ ol {
 .section-heading h2 {
     font-size: 36px; /* Standardized Size */
     font-weight: 700; /* Standardized Weight */
-    color: #1F1135; /* Standardized Navy Color */
+    color: var(--color-heading-custom); /* Standardized Navy Color using variable */
     text-transform: capitalize;
     margin-bottom: 15px;
     font-family: var(--font-primary); /* Ensure Font Family */
@@ -818,7 +829,7 @@ html, body {
 
 /* Sticky State (Floating Pill) */
 .header-area.sticky {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--bg-sticky-nav);
     backdrop-filter: blur(10px); /* Frosted glass effect */
     padding: 10px 0;
     margin-top: 15px; /* Creates the float effect */
@@ -834,7 +845,7 @@ html, body {
     display: flex;
     align-items: center;
     font-weight: 700;
-    color: #333;
+    color: var(--color-heading-custom);
     font-size: 20px;
 }
 .navbar-brand .brand-text {
@@ -843,7 +854,7 @@ html, body {
 
 /* Nav Links */
 .navbar-nav .nav-item .nav-link {
-    color: #333;
+    color: var(--color-heading-custom);
     font-weight: 600;
     font-size: 15px;
     padding: 0 15px;
@@ -864,7 +875,7 @@ html, body {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #ffffff;
     margin: 5px 0;
     transition: all 0.3s;
 }
@@ -1195,7 +1206,7 @@ html, body {
 
     .welcome-content {
         vertical-align: middle;
-        margin-top: 100px !important
+        margin-top: 30px !important
 
     }
     .welcome-content h1{
@@ -2160,7 +2171,7 @@ p.artficial:before{
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
-    color: var(--color-text-dark); /* Dark Blue for visibility */
+    color: black; /* Dark Blue for visibility */
     font-family: var(--font-primary); /* Ensure Brand Font */
     position: relative;
     transition: all 0.3s ease;
@@ -2176,7 +2187,7 @@ p.artficial:before{
     background-color: #fff;
     border-radius: 20px 20px 0 0;
     margin-bottom: 0;
-    color: var(--color-text-dark); /* Keep Dark Blue */
+    color: black; /* Keep Dark Blue */
     box-shadow: 0 -2px 10px rgba(0,0,0,0.03); /* Subtle top shadow */
 }
 
@@ -2197,7 +2208,7 @@ p.artficial:before{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-dark); /* Dark Blue Icon */
+    color: black; /* Dark Blue Icon */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
 }
@@ -3674,7 +3685,7 @@ textarea:required {
 }
 .footer-content-area{
     padding: 80px 0;
-    margin-top: 100px
+    margin-top: 40px
 }
 .footer-logo{
     margin-bottom: 15px
@@ -4800,7 +4811,7 @@ label{
     left: 0;
     font-size: 40px;
     font-weight: 700;
-    color: var(--color-accent-cyan); /* Using brand cyan */
+    color: white; /* Using brand cyan */
     line-height: 1;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: top left;
@@ -4812,7 +4823,7 @@ label{
     display: inline-block;
     width: 40px;
     height: 2px;
-    background-color: var(--color-accent-cyan);
+    background-color: white;
     vertical-align: middle;
     margin-left: 10px;
 }
@@ -5399,7 +5410,6 @@ label{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #1F1135;
 }
 
 
@@ -6310,14 +6320,7 @@ label{
     padding-bottom: 50px;
 }
 
-/* Reviews / Social Proof: Stronger Visual Weight */
-.clients_testimonials_area {
-    background-color: #f9f9fd; /* Slight tint to distinguish */
-    border-top: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
+
 
 /* Global Spacing Refinements */
 .section-heading {

@@ -5,6 +5,7 @@
     height: 100%;
     overflow: hidden; /* Ensures the corner price doesn't overflow if we used a transform, but mainly keeps clean edges */
     transition: transform 0.3s ease;
+    background-color: var(--bg-card);
 }
 
 .offer-card-v2:hover {
@@ -35,8 +36,8 @@
 
 /* Specific Colors for Primary Card */
 .primary-card .corner-price {
-    background-color: #fff;
-    color: var(--color-primary); /* Use primary color for the text */
+    background-color: white;
+    color: black; /* Use primary color for the text */
 }
 
 /* Adjust Content Padding since Price is absolute */

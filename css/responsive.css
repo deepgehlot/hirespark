@@ -34,7 +34,7 @@
     .welcome_single_slider.height-900 {
         height: 700px;
     }
-    .welcome-content.v2{margin-top: 170px}
+    .welcome-content.v2{margin-top: 30px}
     .welcome-content h2 {
         font-size: 30px;
     }
@@ -182,6 +182,10 @@
     /* Global Padding Reset for Mobile */
     section, [class*="section-padding"] {
         padding-bottom: 0 !important;
+    }
+    
+    .mt-responsive-remove {
+        margin-top: 0 !important;
     }
 }
 

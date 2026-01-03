@@ -34,4 +34,25 @@
     --gradient-primary: linear-gradient(to right, var(--color-secondary) 0%, var(--color-primary) 100%);
     --gradient-preloader: linear-gradient(to right, var(--color-tertiary), var(--color-accent-dream-blue));
     --gradient-overlay: linear-gradient(to right, rgba(24, 25, 53, 0.95), rgba(23, 49, 135, 0.95));
+    
+    /* Semantic Colors */
+    --bg-body: #ffffff;
+    --bg-card: #ffffff;
+    --color-heading-custom: #1F1135;
+    --bg-sticky-nav: rgba(255, 255, 255, 0.95);
+}
+
+body.dark-version {
+    --bg-body: #212122;
+    --bg-card: #181935;
+    --color-text-body: #d9d9d9;
+    --color-heading-custom: #ffffff;
+    --color-text-dark: #ffffff;
+    --color-secondary: #a0a0a0;
+    
+    /* Brighter colors for dark mode */
+    --color-primary: #5c7cfa; 
+    --color-accent-dream-blue: #5c7cfa;
+    --color-accent-blue: #5c7cfa;
+    --bg-sticky-nav: rgba(24, 25, 53, 0.5);
 }
