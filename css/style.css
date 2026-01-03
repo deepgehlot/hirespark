@@ -764,7 +764,7 @@ ol {
     padding: 14px 32px;
     letter-spacing: normal;
     color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgb(255, 255, 255, 0.297);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -851,7 +851,9 @@ html, body {
 .navbar-brand .brand-text {
     margin-left: 10px;
 }
-
+.navbar{
+    padding: 0 !important;
+}
 /* Nav Links */
 .navbar-nav .nav-item .nav-link {
     color: var(--color-heading-custom);
@@ -4581,13 +4583,21 @@ body.light-version {
 
 /* demo page */
 .demo-item {
-    -webkit-box-shadow: 0 2px 28px rgba(0,0,0,.1);
-    box-shadow: 0 2px 28px rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgb(255 255 255 / 46%); /* Minimal shadow */
     transition: all .3s ease-in;   
     overflow: hidden;
     background: #fff;
     margin-bottom: 30px;
     border: 2px solid transparent;
+    text-align: center;
+}
+.demo-slides{
+    justify-self: center;
+}
+
+.demo-item img {
+    margin: 0 auto;
+    display: block;
 }
 @media (min-width: 1200px){
     .demo .container {
@@ -4976,7 +4986,7 @@ label{
 .hero-label {
     color: #4A4A68;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
@@ -5087,7 +5097,7 @@ label{
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 2px;
-    color: #000;
+    color: #000 !important;
 }
 
 .user-role {
@@ -5185,8 +5195,9 @@ label{
     }
     
     .floating-card.card-1 {
-        top: 10%;
-        left: 0;
+        top: 0%;
+        left: auto;
+        right: 0;
     }
     
     .floating-card.card-2 {
@@ -5200,7 +5211,7 @@ label{
     }
     
     .hero-resume-img {
-        max-width: 80%;
+        max-width: 90%;
         height: auto;
     }
 }
@@ -5216,8 +5227,9 @@ label{
     }
 
     .floating-card.card-1 {
-        top: 0%;
-        left: -10px;
+        top: -10%;
+        left: auto;
+        right: -10px;
     }
 
     .floating-card.card-2 {
@@ -5833,7 +5845,7 @@ label{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 300;
     color: #173187; /* Accent Blue */
     display: block;
     margin-bottom: 15px;
@@ -6378,4 +6390,3 @@ label{
     margin-bottom: 20px;
     opacity: 1;
 }
-
