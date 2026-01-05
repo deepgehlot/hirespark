@@ -5211,7 +5211,7 @@ label{
     }
     
     .hero-resume-img {
-        max-width: 90%;
+        max-width: 70%;
         height: auto;
     }
 }
@@ -5219,11 +5219,11 @@ label{
 @media (max-width: 767px) {
     .floating-card {
         display: block; /* Show cards */
-        transform: scale(0.75);
+        transform: scale(0.55);
         transform-origin: center;
         padding: 10px;
         z-index: 20; 
-        max-width: 220px;
+        max-width: 190px;
     }
 
     .floating-card.card-1 {
@@ -6143,14 +6143,14 @@ label{
 
 .contact-label {
     font-size: 14px;
-    color: #888;
+    color: #ffffff;
     margin-bottom: 8px;
     display: block;
 }
 
 .contact-value {
     font-size: 18px;
-    color: #1a1a1a;
+    color: #dfdfdf;
     font-weight: 500;
     display: block;
     margin-bottom: 5px;
@@ -6183,7 +6183,7 @@ label{
 
 .new-contact-form label {
     font-size: 14px;
-    color: #1a1a1a;
+    color: #cdcaca;
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
