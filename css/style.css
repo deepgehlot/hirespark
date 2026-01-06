@@ -833,7 +833,7 @@ html, body {
     backdrop-filter: blur(10px); /* Frosted glass effect */
     padding: 10px 0;
     margin-top: 15px; /* Creates the float effect */
-    width: 90%; /* Floating width */
+    width: 95%; /* Floating width */
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px; /* The Pill Shape */
