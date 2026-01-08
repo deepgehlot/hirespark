@@ -42,7 +42,7 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 40px;
+            padding: 35px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -260,46 +260,86 @@
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Plan 1 -->
-                <div class="col-12 col-md-6 col-lg-5 mb-5 mb-lg-0">
+                <!-- Plan 1: Free Resume Diagnostic -->
+                <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
                     <div class="new-price-card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-header">
-                            <h3>Detailed Resume Assessment</h3>
-                            <span class="card-price">$39</span>
+                        <div class="card-header mt-3">
+                            <h3>Free Resume Diagnostic</h3>
+                            <span class="card-price">Free</span>
                         </div>
-                        <p class="card-desc">In-depth feedback without a rewrite.</p>
+                        <p class="card-desc">Limited availability</p>
                         <ul class="feature-list">
-                            <li><i class="fa fa-info-circle"></i> This is not a rewrite</li>
-                            <li><i class="fa fa-times"></i> We don’t provide DIY instructions or wording to copy</li>
-                            <li><i class="fa fa-check"></i> You receive professional insight, not edits</li>
-                            <li><i class="fa fa-clock-o"></i> Done in 48-72 hours</li>
+                            <li><i class="fa fa-search"></i> Short, high-level review</li>
+                            <li><i class="fa fa-question-circle"></i> Helps determine if a rebuild is needed</li>
+                            <li><i class="fa fa-exclamation-circle"></i> Selection-based due to demand</li>
+                            <li><i class="fa fa-clock-o"></i> Response within 24–48 hours if selected</li>
                         </ul>
-                        <p style="color: #888; font-size: 13px; margin-bottom: 20px; line-height: 1.4;">
-                            Best for people who want clarity before committing to a full rebuild or who need an expert
-                            evaluation of their current resume.
-                        </p>
-                        <a href="#" class="btn card-btn btn-outline-custom">Get Assessment</a>
+                        <div style="flex-grow:1;"></div>
+                        <a href="#" class="btn card-btn btn-outline-custom mt-3">Request Free Diagnostic</a>
                     </div>
                 </div>
 
-                <!-- Plan 2 -->
-                <div class="col-12 col-md-6 col-lg-5">
-                    <div class="new-price-card featured-card wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="card-header">
-                            <h3>Full Resume Rebuild</h3>
-                            <span class="card-price">$80</span>
+                <!-- Plan 2: Detailed Resume Assessment -->
+                <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="new-price-card wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="card-header mt-3">
+                            <h3>Detailed Resume Assessment</h3>
+                            <span class="card-price">$39</span>
+                            <span style="display:block; font-size: 14px; color: #888; margin-top: 5px;">One-time
+                                payment</span>
                         </div>
-                        <p class="card-desc">For job seekers who want results, not guesswork.</p>
+                        <p class="card-desc">In-depth written assessment of your existing resume.</p>
                         <ul class="feature-list">
-                            <li><i class="fa fa-check"></i> Complete resume rewrite and restructure</li>
-                            <li><i class="fa fa-check"></i> Strong positioning for your target roles</li>
-                            <li><i class="fa fa-check"></i> Clear seniority, ownership, and scope</li>
-                            <li><i class="fa fa-check"></i> Clean, recruiter-friendly formatting</li>
-                            <li><i class="fa fa-check"></i> Final resume delivered as a polished PDF</li>
-                            <li><i class="fa fa-check"></i> Editable version included for future updates</li>
-                            <li><i class="fa fa-clock-o" style="color: #FFD700;"></i> Done in 48-72 hours</li>
+                            <li><i class="fa fa-check"></i> Clear explanation of what’s working and what’s blocking
+                                interviews</li>
+                            <li><i class="fa fa-check"></i> Positioning, clarity, and structural issues identified</li>
+                            <li><i class="fa fa-check"></i> Honest feedback based on real hiring standards</li>
+                            <li><i class="fa fa-times"></i> No rewrites, no templates, no DIY edits</li>
+                            <li><i class="fa fa-clock-o"></i> Delivery time with 48-72 hours</li>
                         </ul>
-                        <a href="#" class="btn card-btn btn-primary-custom">Get Full Rebuild</a>
+                        <p style="color: #888; font-size: 13px; margin-bottom: 20px; line-height: 1.4;">
+                            This is an analysis only. No changes are made to your resume.
+                        </p>
+                        <div style="flex-grow:1;"></div>
+                        <a href="#" class="btn card-btn btn-outline-custom">Get a Detailed Assessment</a>
+                    </div>
+                </div>
+
+                <!-- Plan 3: Resume Rebuild -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="new-price-card featured-card wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="card-header mt-3">
+                            <h3>Resume Rebuild</h3>
+                            <span class="card-price">$80</span>
+                            <span style="display:block; font-size: 14px; color: #ccc; margin-top: 5px;">One-time
+                                payment</span>
+                        </div>
+                        <p class="card-desc">Professionally rebuilt resume from scratch.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa fa-check"></i> Clear structure, strong positioning, and role-focused
+                                wording</li>
+                            <li><i class="fa fa-check"></i> Experience rewritten to reflect responsibility and seniority
+                            </li>
+                            <li><i class="fa fa-check"></i> Final PDF resume (application-ready)</li>
+                            <li><i class="fa fa-check"></i> Editable file included (for future updates)</li>
+                            <li><i class="fa fa-clock-o" style="color: #FFD700;"></i> Delivered within 48–72 hours via
+                                email</li>
+                        </ul>
+
+                        <div style="margin-bottom: 20px; text-align: left;">
+                            <p style="font-size: 14px; color: #fff; margin-bottom: 5px; font-weight: 600;">Revision
+                                policy</p>
+                            <p style="font-size: 13px; color: #ccc; line-height: 1.4;">One revision round included if
+                                you’re not happy. We refine based on feedback until the resume feels right.</p>
+                        </div>
+
+                        <p
+                            style="color: #ccc; font-size: 13px; margin-bottom: 20px; line-height: 1.4; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+                            This is a rebuild, not editing or tweaking. The resume is rewritten and delivered ready to
+                            apply.
+                        </p>
+                        <a href="#" class="btn card-btn btn-primary-custom">Rebuild My Resume</a>
                     </div>
                 </div>
             </div>
@@ -400,7 +440,7 @@
 
         </div>
         <div class="footer-bottom-strip text-center py-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
-            <p class="m-0" style="color: rgba(255,255,255,0.7); font-size: 14px;">&copy; 2026 HireSpark. All rights
+            <p class="m-0" style="color: rgba(255,255,255,0.7); font-size: 14px;"> HireSpark™ © 2026. All rights
                 reserved.</p>
         </div>
     </footer>

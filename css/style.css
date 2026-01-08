@@ -6022,12 +6022,12 @@ label{
 @media (min-width: 992px) {
     /* Small Card */
     .offer-card-v2.card-sm {
-        height: 300px;
+        height: 310px;
     }
 
     /* Medium Card */
     .offer-card-v2.card-md {
-        height: 300px;
+        height: 310px;
     }
 
     /* Large Card */
@@ -6546,3 +6546,150 @@ label{
     width: 100%;
     /* object-fit: cover; */
 }
+
+/* Specific styles for pricing page */
+        .pricing-hero-section {
+            padding: 180px 0 100px 0;
+            background-color: #000;
+            /* Match dark theme */
+            text-align: center;
+        }
+
+        /* New Unique Pricing Cards */
+        .pricing-section {
+            padding: 50px 0 100px;
+            background-color: #000;
+        }
+
+        .new-price-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .new-price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .new-price-card.featured-card {
+            background: linear-gradient(145deg, rgba(23, 49, 135, 0.15) 0%, rgba(12, 15, 38, 0.5) 100%);
+            border: 1px solid #173187;
+        }
+
+        .new-price-card.featured-card:hover {
+            box-shadow: 0 10px 40px rgba(23, 49, 135, 0.3);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #173187;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-header h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-price {
+            font-size: 48px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-price span {
+            font-size: 16px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .card-desc {
+            color: #ccc;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 50px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            color: #ccc;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 15px;
+        }
+
+        .feature-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #173187;
+        }
+
+        .featured-card .feature-list li i {
+            color: #4a6fdc;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: #0c0f26;
+        }
+
+        .btn-primary-custom {
+            background: #173187;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background: #2546b0;
+            color: white;
+            box-shadow: 0 5px 15px rgba(23, 49, 135, 0.4);
+        }

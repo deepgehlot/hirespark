@@ -101,7 +101,6 @@
     /* Mobile Card Spacing Fix */
     .problem-card,
     .offer-card-v2 {
-        margin-bottom: 60px !important; /* Increased from 30px to 60px */
         margin-top: 15px !important; 
     }
     .classy-navbar {
