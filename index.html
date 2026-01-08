@@ -21,11 +21,19 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/custom_terms.css">
     <link rel="stylesheet" href="css/pricing-custom.css">
+    <link rel="stylesheet" href="css/carousel-custom.css">
+    <link rel="stylesheet" href="css/carousel-custom-mobile.css">
 
 </head>
 
-<body class="light-version">
+<body class="dark-version">
 
+
+    <!-- Sticky Delivery Highlight -->
+    <div class="delivery-highlight wow fadeInRight" data-wow-delay="1s">
+
+        <span class="delivery-text"><i class="fa fa-clock-o"></i>&nbsp;Delivery time 48-72 hours</span>
+    </div>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
@@ -48,11 +56,13 @@
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Templates</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Resume Rebuild</a></li>
+                        <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+
                     </ul>
                     <!-- CTA Button -->
                     <a href="#" class="btn login-btn ml-3">Get Your Resume Rebuilt</a>
@@ -69,11 +79,13 @@
                 </div>
                 <ul class="mobile-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="pricing.html">Resume Rebuild</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+
                 </ul>
                 <a href="#" class="btn login-btn mobile-cta">Get Your Resume Rebuilt</a>
             </div>
@@ -102,8 +114,12 @@
                             We focus on clear structure and strong position
                         </p>
                         <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="#" class="btn dream-btn cta-btn-v2 mr-3">Request a free Resume Diagnostic ✨</a>
-                            <label class="terms-text">* Free diagnostic review only.
+                            <a href="#" class="btn dream-btn cta-btn-v2 mr-3">Get your Resume Rebuilt</a>
+
+                            <a href="#" class="btn dream-btn cta-btn-v2 cta-btn-secondary mt-3">Not sure? Start with a
+                                free
+                                resume diagnostic</a>
+                            <label class="terms-text mt-3">* Free diagnostic review only.
                                 Due to demand, we can’t review every submission.
                                 If selected, you’ll hear back within 24–48 hours.</label>
                         </div>
@@ -144,19 +160,12 @@
                         <!-- Floating Card 2: TikTok -->
                         <div class="floating-card card-2 wow fadeInUp" data-wow-delay="0.8s">
                             <div class="card-content">
-                                <p class="tweet-text">Powerful websites I wish I knew earlier:<br>This one is a
-                                    <strong>LIFESAVER</strong> 😍
-                                </p>
-                                <div class="tiktok-meta">
-                                    <span class="tiktok-handle">@maedeh.davami | 1.8 million views</span>
-                                    <div class="platform-icon tiktok-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16"
-                                            height="16">
-                                            <path
-                                                d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
-                                        </svg>
-                                    </div>
+                                <div class="user-info">
+                                    <h5 class="user-name">Sarah Jenkins</h5>
+                                    <p class="user-role">Software Engineer</p>
+                                    <div class="stars">★★★★★</div>
                                 </div>
+                                <div class="platform-icon l-icon">in</div>
                             </div>
                         </div>
 
@@ -184,7 +193,7 @@
 
 
     <!-- ##### Manifesto (What We Do) Section Start ##### -->
-    <section class="manifesto-area section-padding-70-70">
+    <section class="manifesto-area section-padding-70-0">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10 text-center">
@@ -203,13 +212,13 @@
     </section>
     <!-- ##### Manifesto Section End ##### -->
     <!-- ##### How It Works Area Start ##### -->
-    <section class="how-it-works-section section-padding-70-70" id="how-it-works">
+    <section class="how-it-works-section section-padding-70-0" id="how-it-works">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                 </div>
-                <h2 class="wow fadeInUp" data-wow-delay="0.3s">Simple. Frictionless. Human.</h2>
+                <h2 class="wow fadeInUp" data-wow-delay="0.3s">Human Expert-led Service</h2>
                 <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">No account creation required. No complex dashboards. Just
                     a straightforward process to get you hired.</p> -->
             </div>
@@ -232,7 +241,8 @@
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">02</div>
                         <h4 class="hiw-step-title">Submit your details</h4>
-                        <p class="hiw-step-desc">Upload your resume, target role, and context.</p>
+                        <p class="hiw-step-desc">Upload your resume and answer a short set of questions so we understand
+                            your background and target roles.</p>
                     </div>
                 </div>
 
@@ -241,7 +251,9 @@
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">03</div>
                         <h4 class="hiw-step-title">We rebuild your resume</h4>
-                        <p class="hiw-step-desc">Reviewed and rewritten manually by professionals.
+                        <p class="hiw-step-desc">We rebuild your resume from the ground up, focusing on structure,
+                            clarity, and positioning.
+
                         </p>
                     </div>
                 </div>
@@ -254,13 +266,13 @@
                     <div class="hiw-step-box">
                         <div class="hiw-step-number">04</div>
                         <h4 class="hiw-step-title">Receive by email</h4>
-                        <p class="hiw-step-desc">Delivered within 48–72 hours.
-                            Minor tweaks handled via email.
+                        <p class="hiw-step-desc">Your finished resume is delivered by email within 48–72 hours, ready to
+                            apply.
                         </p>
                     </div>
                 </div>
 
-                <div class="col-12 text-center mt-50 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="col-12 text-center mt-50 mt-responsive-remove wow fadeInUp" data-wow-delay="0.6s">
                     <a class="btn dream-btn" href="#">Get Started</a>
                 </div>
 
@@ -272,7 +284,7 @@
 
 
 
-    <section class="demo section-padding-70-70 ring-bg">
+    <section class="demo section-padding-70-0 ring-bg">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
@@ -286,9 +298,10 @@
             <div class="row demo-slides owl-carousel">
 
                 <div class="col-12">
+                    <h5 class="text-center mb-3">Yellow — Modern Impact</h5>
                     <div class="demo-item">
-                        <a href='#'><img src="img/demos/Black and White Modern Professional Resume_page-0001.jpg"
-                                alt="demo" class="img-responsive"></a>
+                        <a href='#'><img src="img/Resume/Black_and_White_Modern_Professional_Resume.jpg" alt="demo"
+                                class="img-responsive"></a>
                         <div class="preview-btn-wrapper text-center">
                             <a class='preview-demo v2' href='#'>Use template <i class="fa fa-long-arrow-right"></i></a>
                         </div>
@@ -296,9 +309,10 @@
                 </div>
 
                 <div class="col-12">
+                    <h5 class="text-center mb-3">Black — Executive Classic</h5>
                     <div class="demo-item">
-                        <a href='#'><img src="img/demos/White and Black Tech Professional Resume_page-0001.jpg"
-                                alt="demo" class="img-responsive"></a>
+                        <a href='#'><img src="img/Resume/White_and_Black_Tech_Professional_Resume.jpg" alt="demo"
+                                class="img-responsive"></a>
                         <div class="preview-btn-wrapper text-center">
                             <a class='preview-demo v2' href='#'>Use template <i class="fa fa-long-arrow-right"></i></a>
                         </div>
@@ -306,8 +320,9 @@
                 </div>
 
                 <div class="col-12">
+                    <h5 class="text-center mb-3">Purple — Strategic Professional</h5>
                     <div class="demo-item">
-                        <a href='#'><img src="img/demos/Purple and White Clean and Professional Resume_page-0001.jpg"
+                        <a href='#'><img src="img/Resume/Purple_and_White_Clean_and_Professional_Resume_Justin-Sims.jpg"
                                 alt="demo" class="img-responsive"></a>
                         <div class="preview-btn-wrapper text-center">
                             <a class='preview-demo v2' href='#'>Use template <i class="fa fa-long-arrow-right"></i></a>
@@ -322,7 +337,7 @@
 
 
     <!-- ##### Pricing Area Start ##### -->
-    <section class="core-offer-area section-padding-70-70">
+    <section class="core-offer-area section-padding-70-0">
         <div class="container">
             <!-- Centered Section Heading -->
             <div class="section-heading text-center">
@@ -341,10 +356,14 @@
                             <h3 style="color: white;">$80</h3>
                         </div>
                         <div class="offer-content-v2 text-center mt-5">
-                            <h4>Full Resume Rebuild</h4>
+                            <h4 style="color: black;">Full Resume Rebuild</h4>
                             <div class="offer-desc mt-3">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <ul class="offer-list" style="text-align: left; color: gray; margin-top: 20px;">
+                                    <li><i class="fa fa-check mr-2"></i> Complete resume rewrite</li>
+                                    <li><i class="fa fa-check mr-2"></i> Strategic positioning of seniority</li>
+                                    <li><i class="fa fa-check mr-2"></i> Alignment with target roles</li>
+                                    <li><i class="fa fa-check mr-2"></i> Clean, recruiter-friendly format</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -355,13 +374,17 @@
                 <div class="col-12 col-md-6 d-flex">
                     <div class="offer-card-v2 primary-card card-md wow fadeInUp w-100" data-wow-delay="0.3s">
                         <div class="corner-price">
-                            <h3>$39</h3>
+                            <h3 style="color: black;">$39</h3>
                         </div>
                         <div class="offer-content-v2 text-center mt-5">
                             <h4>Paid Resume Assessment</h4>
                             <div class="offer-desc mt-3">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <ul class="offer-list" style="text-align: left; margin-top: 20px;">
+                                    <li><i class="fa fa-check mr-2"></i> High-level professional insight</li>
+                                    <li><i class="fa fa-check mr-2"></i> Analysis of recruiter perception</li>
+                                    <li><i class="fa fa-check mr-2"></i> Focus on strategy over wording</li>
+                                    <li><i class="fa fa-check mr-2"></i> Feedback on current impact</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -374,110 +397,10 @@
 
 
 
-    <!-- ##### Testimonial Area Start ##### -->
-    <section class="clients_testimonials_area section-padding-70-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
-                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.3s">Real Feedback from Real Professionals</h2>
-                        <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">We don't chase algorithms; we build resumes that
-                            work for humans. Here is what happens when
-                            candidates see their experience positioned correctly.</p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cotainer-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-xs-10 offset-xs-1">
-                    <div class="client_slides owl-carousel wow fadeInUp" data-wow-delay="0.5s">
-
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <div class="icon_wrapper">
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testimonial-description">
-                                <div class="testimonial_text">
-                                    <p>"Oh wow I am so amazed with this, I can't even find the words! This is way beyond
-                                        [what] I have ever had completed... it really highlights my work. Thank you so
-                                        much for taking the time and really showcasing my experience in a way that I
-                                        could never have imagined."</p>
-                                </div>
-                                <div class="admin_text">
-                                    <h5>Natalia Ntuk</h5>
-                                    <p>Client</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <div class="icon_wrapper">
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testimonial-description">
-                                <div class="testimonial_text">
-                                    <p>"This is great. Thank you so much. The layout is tighter, cleaner, and more
-                                        senior-looking. The company names are bold and consistent, line spacing is
-                                        cleaned up, and the education section now includes both degrees."</p>
-                                </div>
-                                <div class="admin_text">
-                                    <h5>Tom Pariso</h5>
-                                    <p>Client</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <div class="icon_wrapper">
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testimonial-description">
-                                <div class="testimonial_text">
-                                    <p>"Thanks for this rewrite! Love and agree with all your improvements and am
-                                        definitely happy! Appreciate how quick your services are, and definitely will
-                                        recommend you to others in need of a new resume!"</p>
-                                </div>
-                                <div class="admin_text">
-                                    <h5>Jarel Mitchell</h5>
-                                    <p>Client</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial text-center">
-                            <div class="icon_wrapper">
-                                <i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testimonial-description">
-                                <div class="testimonial_text">
-                                    <p>"Everything else is spot on and I like the outcome. I think with the foundation
-                                        you have provided I can add in the clarification on my own. Thanks again."</p>
-                                </div>
-                                <div class="admin_text">
-                                    <h5>Rachael</h5>
-                                    <p>Client</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Testimonial Area End ##### -->
 
 
     <!-- ##### Before/After Slider Area Start ##### -->
-    <section class="before-after-slider-section section-padding-70-70" style="background: transparent;">
+    <section class="before-after-slider-section section-padding-70-0" style="background: transparent;">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
@@ -499,12 +422,12 @@
                                 <div class="ba-images-container">
                                     <!-- Before Image (Background) -->
                                     <div class="ba-before-label">Before</div>
-                                    <img src="img/demos/demo-1.png" class="ba-img-base" alt="Before">
+                                    <img src="img/Resume/1.jpg" class="ba-img-base" alt="Before">
 
                                     <!-- After Image (Clipped) -->
                                     <div class="ba-after-img-wrapper" style="width: 50%;">
                                         <div class="ba-after-label">After</div>
-                                        <img src="img/demos/demo-1.png" class="ba-img-overlay" alt="After">
+                                        <img src="img/Resume/1.jpg" class="ba-img-overlay" alt="After">
                                         <!-- Using same img but will style differently for demo if needed, or user needs to provide pair -->
                                     </div>
                                 </div>
@@ -522,31 +445,25 @@
                         <!-- Content -->
                         <div class="col-12 col-lg-5">
                             <div class="ba-content">
-                                <h3 class="ba-title">Finance Professional</h3>
+                                <h3 class="ba-title">VP Marketing & Sales</h3>
                                 <div class="ba-features">
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Optimized Format</h5>
-                                            <p>Clean, modern layout that guides the recruiter's eye.</p>
+                                            <h5>Revenue Impact</h5>
+                                            <p>Highlighted $25M+ revenue growth and commercial execution.</p>
                                         </div>
                                     </div>
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Quantified Impact</h5>
-                                            <p>Replaced "responsible for" with hard numbers and results.</p>
+                                            <h5>ROI Focus</h5>
+                                            <p>Showcased 1,327% ROI achievement in 2023 clearly.</p>
                                         </div>
                                     </div>
-                                    <div class="ba-feature-item">
-                                        <i class="fa fa-check-circle"></i>
-                                        <div>
-                                            <h5>ATS Compatible</h5>
-                                            <p>Parsed correctly by screening software.</p>
-                                        </div>
-                                    </div>
+
                                 </div>
-                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
+                                <a href="#" class="btn dream-btn mt-30">try Hirespark now</a>
                             </div>
                         </div>
                     </div>
@@ -559,10 +476,10 @@
                             <div class="ba-interactive-widget">
                                 <div class="ba-images-container">
                                     <div class="ba-before-label">Before</div>
-                                    <img src="img/demos/demo-2.png" class="ba-img-base" alt="Before">
+                                    <img src="img/Resume/2.jpg" class="ba-img-base" alt="Before">
                                     <div class="ba-after-img-wrapper" style="width: 50%;">
                                         <div class="ba-after-label">After</div>
-                                        <img src="img/demos/demo-2.png" class="ba-img-overlay" alt="After">
+                                        <img src="img/Resume/2.jpg" class="ba-img-overlay" alt="After">
                                     </div>
                                 </div>
                                 <input type="range" min="0" max="100" value="50" class="ba-range-input"
@@ -575,24 +492,26 @@
                         </div>
                         <div class="col-12 col-lg-5">
                             <div class="ba-content">
-                                <h3 class="ba-title">Tech & Engineering</h3>
+                                <h3 class="ba-title">Senior Systems Analyst</h3>
                                 <div class="ba-features">
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Technical Skills Highlight</h5>
-                                            <p>Strategically placed skills section for quick scanning.</p>
+                                            <h5>Data Engineering</h5>
+                                            <p>Deep technical experience in data pipeline design and SQL development.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Project Showcase</h5>
-                                            <p>Detailed project blocks with links to GitHub/Live demos.</p>
+                                            <h5>Systems Analysis</h5>
+                                            <p>Strong track record of automating workflows and improving data
+                                                reliability.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
+                                <a href="#" class="btn dream-btn mt-30">try Hirespark now</a>
                             </div>
                         </div>
                     </div>
@@ -605,10 +524,10 @@
                             <div class="ba-interactive-widget">
                                 <div class="ba-images-container">
                                     <div class="ba-before-label">Before</div>
-                                    <img src="img/demos/demo-3.png" class="ba-img-base" alt="Before">
+                                    <img src="img/resume original/6.jpg" class="ba-img-base" alt="Before">
                                     <div class="ba-after-img-wrapper" style="width: 50%;">
                                         <div class="ba-after-label">After</div>
-                                        <img src="img/demos/demo-3.png" class="ba-img-overlay" alt="After">
+                                        <img src="img/Resume/3.jpg" class="ba-img-overlay" alt="After">
                                     </div>
                                 </div>
                                 <input type="range" min="0" max="100" value="50" class="ba-range-input"
@@ -621,24 +540,74 @@
                         </div>
                         <div class="col-12 col-lg-5">
                             <div class="ba-content">
-                                <h3 class="ba-title">Creative & Design</h3>
+                                <h3 class="ba-title">Mechanical Engineer</h3>
                                 <div class="ba-features">
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Portfolio Integration</h5>
-                                            <p>Seamless links to your portfolio work.</p>
+                                            <h5>Advanced R&D Focus</h5>
+                                            <p>Specialized in soft robotics, mechanical systems, and data-driven
+                                                modeling.</p>
                                         </div>
                                     </div>
                                     <div class="ba-feature-item">
                                         <i class="fa fa-check-circle"></i>
                                         <div>
-                                            <h5>Visual Hierarchy</h5>
-                                            <p>Uses typography and spacing to create a strong visual impact.</p>
+                                            <h5>Academic Excellence</h5>
+                                            <p>PhD-level expertise with a strong track record of research and
+                                                publication.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn dream-btn mt-30">Create This Resume</a>
+                                <a href="#" class="btn dream-btn mt-30">try Hirespark now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="single-ba-slide">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <div class="ba-interactive-widget">
+                                <div class="ba-images-container">
+                                    <div class="ba-before-label">Before</div>
+                                    <img src="img/resume original/8.jpg" class="ba-img-base" alt="Before">
+                                    <div class="ba-after-img-wrapper" style="width: 50%;">
+                                        <div class="ba-after-label">After</div>
+                                        <img src="img/Resume/4.jpg" class="ba-img-overlay" alt="After">
+                                    </div>
+                                </div>
+                                <input type="range" min="0" max="100" value="50" class="ba-range-input"
+                                    oninput="updateBASlider(this)">
+                                <div class="ba-handle" style="left: 50%;">
+                                    <div class="handle-line"></div>
+                                    <div class="handle-circle"><i class="fa fa-arrows-h"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-5">
+                            <div class="ba-content">
+                                <h3 class="ba-title">Senior Program Manager</h3>
+                                <div class="ba-features">
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Aviation & Aerospace</h5>
+                                            <p>15+ years experience leading complex programs in regulated environments.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ba-feature-item">
+                                        <i class="fa fa-check-circle"></i>
+                                        <div>
+                                            <h5>Asset Management</h5>
+                                            <p>Managed $50M+ rotable asset pools and multi-million dollar procurement.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn dream-btn mt-30">try Hirespark now</a>
                             </div>
                         </div>
                     </div>
@@ -684,9 +653,154 @@
     <!-- ##### Before/After Slider Area End ##### -->
 
 
+    <!-- ##### Testimonial Area Start ##### -->
+    <section class="clients_testimonials_area section-padding-70-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.3s">Real Feedback from Real Professionals</h2>
+                        <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">We don't chase algorithms; we build resumes that
+                            work for humans. Here is what happens when
+                            candidates see their experience positioned correctly.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cotainer-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-xs-10 offset-xs-1">
+                    <div class="client_slides owl-carousel wow fadeInUp" data-wow-delay="0.5s">
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“I knew my experience was solid, but my resume wasn’t opening doors. The rebuild
+                                        made my role and level immediately clear. I started getting callbacks within
+                                        weeks. It finally felt like the resume matched what I actually do.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Daniel M.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“I was worried my resume looked fine already. After seeing the new version, I
+                                        realised how much clarity was missing. Nothing was exaggerated, but everything
+                                        read stronger and more intentional.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Sofia R.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“I’ve worked in leadership roles for years and still kept getting passed over.
+                                        The rebuild changed how my responsibility and decision-making showed up on
+                                        paper. It felt like a senior resume for the first time.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Michael T.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“I appreciated that nothing was added or made up. The resume simply explained my
+                                        work better. It’s much easier to skim now, and recruiters actually understand my
+                                        background.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Priya S.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“I didn’t need advice or tips, I needed my resume to work. This was the first
+                                        time I looked at it and thought, ‘Yes, this is accurate.’ I’ve already been
+                                        asked to interview for roles I was targeting.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Jonathan L.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“The old version listed what I did. The new one shows why it mattered. That
+                                        difference is subtle, but powerful. I finally feel confident sending it out.”
+                                    </p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Hannah K.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="icon_wrapper">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-description">
+                                <div class="testimonial_text">
+                                    <p>“The process was straightforward and professional. The final resume feels clean,
+                                        focused, and aligned with my career direction. It doesn’t try to impress, it
+                                        just makes sense.”</p>
+                                </div>
+                                <div class="admin_text">
+                                    <h5>Marco D.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Testimonial Area End ##### -->
 
     <!-- ##### FAQ Area Start ##### -->
-    <section class="faq-area section-padding-70-70 ring-bg">
+    <section class="faq-area section-padding-70-0 ring-bg">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s">
@@ -761,9 +875,9 @@
                                     <a href="#"><img src="img/core-img/hire_spark_logo.png" alt="logo"> HireSpark
                                     </a>
                                 </div>
-                                <p>HireSpark is a 100% human-led resume writing service. We help capable professionals
-                                    get the attention they deserve through manual, strategic positioning. No AI. No
-                                    templates.</p>
+                                <p>Professionally written resumes for job seekers who want clarity, confidence, and
+                                    results.
+                                    Resume rebuilds focused on clarity, positioning, and seniority.</p>
                             </div>
                             <!-- Social Icon -->
                             <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
@@ -780,17 +894,20 @@
                         <div class="contact_info_area d-sm-flex justify-content-between">
                             <!-- Content Info -->
                             <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">
-                                <h5>Legal</h5>
-                                <a href="#">
-                                    <p>Privacy Policy</p>
+                                <h5>NAVIGATE</h5>
+                                <a href="index.html">
+                                    <p>Home</p>
                                 </a>
-                                <a href="#">
-                                    <p>Terms of Service</p>
+                                <a href="insights.html">
+                                    <p>Insights</p>
                                 </a>
-                                <a href="#">
-                                    <p>Cookie Policy</p>
+                                <a href="pricing.html">
+                                    <p>Pricing</p>
                                 </a>
 
+                                <a href="index.html#how-it-works">
+                                    <p>How It Works</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -799,18 +916,18 @@
                         <!-- Content Info -->
                         <div class="contact_info_area d-sm-flex justify-content-between">
                             <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
-                                <h5>Menu</h5>
-                                <a href="#">
-                                    <p>Home</p>
+                                <h5>Support</h5>
+                                <a href="contact-us.html">
+                                    <p>Contact</p>
+                                </a>
+                                <a href="faq.html">
+                                    <p>FAQs</p>
                                 </a>
                                 <a href="#">
-                                    <p>How It Works</p>
+                                    <p>Privacy Policy</p>
                                 </a>
                                 <a href="#">
-                                    <p>FAQ</p>
-                                </a>
-                                <a href="#">
-                                    <p>Pricing</p>
+                                    <p>Terms of Service</p>
                                 </a>
 
                             </div>
@@ -822,17 +939,23 @@
                         <div class="contact_info_area d-sm-flex justify-content-between">
                             <!-- Content Info -->
                             <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
-                                <h5>CONTACT US</h5>
-                                <p>Mailing Address:xx00 E. Union Ave</p>
-                                <p>Suite 1100. Denver, CO 80237</p>
-                                <p>+999 90932 627</p>
-                                <p>support@yourdomain.com</p>
+                                <h5>Contact</h5>
+                                <p>teamhirespark@gmail.com</p>
+                                <span class="footer-contact-note">
+                                    <b>Note:</b> Free resume reviews are short, high-level diagnostics and not
+                                    guaranteed due to demand.
+                                    Responses typically within 24–48 hours, subject to availability
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+        </div>
+        <div class="footer-bottom-strip text-center py-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <p class="m-0" style="color: rgba(255,255,255,0.7); font-size: 14px;">&copy; 2026 HireSpark. All rights
+                reserved.</p>
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
