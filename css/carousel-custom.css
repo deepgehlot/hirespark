@@ -1,0 +1,67 @@
+/* Demo Carousel Center Highlight */
+.demo-slides .owl-item .demo-item {
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+.demo-slides .owl-item.center .demo-item {
+    transform: scale(1.05); /* Slight scale up for highlight */
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Add shadow to pop */
+}
+
+/* Ensure images inside scale smoothly too if needed, or just container */
+.demo-slides .owl-item.center .demo-item img {
+    /* Optional: extra border or effect */
+}
+
+/* Demo Carousel Navigation Arrows */
+.demo-slides .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Let clicks pass through container */
+}
+
+.demo-slides .owl-nav button.owl-prev,
+.demo-slides .owl-nav button.owl-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary, #341f97) !important; /* Use var if available or fallback */
+    color: #fff !important;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px !important;
+    font-size: 18px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Re-enable clicks on buttons */
+    opacity: 0.7;
+}
+.demo-slides .owl-nav button.owl-prev:hover,
+.demo-slides .owl-nav button.owl-next:hover {
+    background-color: var(--color-secondary, #F69) !important;
+    opacity: 1;
+}
+
+.demo-slides .owl-nav button.owl-prev {
+    left: -50px;
+}
+
+.demo-slides .owl-nav button.owl-next {
+    right: -50px;
+}
+
+/* Responsive adjustments for nav arrows */
+@media (max-width: 767px) {
+    .demo-slides .owl-nav button.owl-prev {
+        left: -10px;
+    }
+    .demo-slides .owl-nav button.owl-next {
+        right: -10px;
+    }
+}

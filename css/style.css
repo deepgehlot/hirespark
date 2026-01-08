@@ -707,7 +707,7 @@ ol {
     padding: 0 20px;
     min-width: 100px;
     color: #fff !important;
-    background: var(--color-accent-dream-blue);
+    background: #173187;
     height: 35px;
     border-radius: 5px;
     border: 1px solid #fff !important;
@@ -717,8 +717,8 @@ ol {
 .login-btn:hover,
 .login-btn:focus {
     color: #fff;
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+    background: #173187;
+    border-color: #173187;
 }
 
 
@@ -3442,7 +3442,7 @@ s;
 .single-blog-area {
     position: relative;
     z-index: 1;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .post-meta p {
@@ -4690,18 +4690,18 @@ body.light-version {
 } */
 .dream-btn.green-btn:hover{
     background: var(--color-white);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    color: #173187;
+    border: 2px solid #173187;
 }
 .btn.dream-btn{
-background: var(--color-primary);
+background: #173187;
 color: var(--color-white);
-border: 2px solid var(--color-primary);
+border: 2px solid #173187;
 }
 .btn.dream-btn:hover{
 background: var(--color-white);
-color: var(--color-primary);
-border: 2px solid var(--color-primary);
+color: #173187;
+border: 2px solid #173187;
 }
 
 label{
@@ -5835,7 +5835,7 @@ label{
 /* Active Navigation Dot Styling */
 .owl-dots .owl-dot.active span,
 .owl-dots .owl-dot:hover span {
-    background: #1F1135 !important; /* Dark Navy */
+    background: #173187 !important; /* Dark Navy */
 }
 
 /* =========================================
@@ -6305,16 +6305,16 @@ label{
     padding: 0 20px;
     text-align: center;
     text-transform: uppercase;
-    background: transparent;
-    color: var(--color-accent-dream-blue);
-    border: 1px solid var(--color-accent-dream-blue);
+    background: white;
+    color: #173187;
+    border: 1px solid #173187;
     border-radius: 7px; /* Using 7px to match dream-btn specific style "not much rounded" */
     transition: all 500ms;
 }
 
 .btn-outline-hirespark:hover {
-    background: var(--color-accent-dream-blue);
-    color: #fff;
+    background: #173187;
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(82, 63, 225, 0.2); /* Approximating the blue shadow */
 }
@@ -6399,4 +6399,150 @@ label{
     font-size: 30px;
     margin-bottom: 20px;
     opacity: 1;
+}
+.dream-btn.cta-btn-secondary {
+    background-color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    color: #000000 !important;
+    font-size: 14px !important; /* Made smaller */
+    padding: 8px 24px !important; /* Reduced padding */
+    min-width: 0 !important; /* Allow it to be smaller */
+    margin-top: 15px; /* Ensure spacing if stacked */
+    text-transform: none;
+}
+
+.dream-btn.cta-btn-secondary:hover {
+    background-color: #173187 !important; /* Transparent on hover */
+    color: #ffffff !important; /* White text on hover */
+    border-color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.15);
+}
+
+/* Sticky Delivery Badge */
+.delivery-highlight {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(120%); /* Initially hidden off-screen */
+    background: #173187; /* Secondary blue */
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; /* Vertical Text */
+    text-orientation: mixed;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy transition */
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.delivery-highlight.is-visible {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.delivery-highlight .delivery-icon {
+    font-size: 20px;
+    margin-bottom: 10px;
+    writing-mode: horizontal-tb; /* Keep icon upright */
+}
+
+.delivery-highlight:hover {
+    padding-right: 20px; /* Slide out slightly */
+    background: #0d1f5e;
+}
+
+/* Mobile Adjustments for Sticky Badge */
+@media (max-width: 767px) {
+    .delivery-highlight {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        transform: translateY(100px); /* Initially hidden down */
+        writing-mode: horizontal-tb; /* Horizontal on mobile */
+        flex-direction: row;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+    
+    .delivery-highlight.is-visible {
+        transform: translateY(0);
+    }
+    
+    .delivery-highlight .delivery-icon {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    
+    .delivery-highlight:hover {
+        padding-right: 20px;
+    }
+}
+
+
+.blog-title-dark {
+    color: #173187 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px; /* Slightly reduced */
+    line-height: 1.3;
+    height: 2.6em;
+}
+
+.blog-content-des {
+    color: #172450c4 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    height: 3em;
+}
+
+/* Fix for equal height blog cards */
+.blog-area .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-blog-area {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px; /* Reduced from 20px to save space */
+}
+
+/* Ensure button doesn't stretch */
+.blog-content .btn.dream-btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Ensure thumbnail image covers well */
+.blog_thumbnail img {
+    height: 300px;
+    width: 100%;
+    /* object-fit: cover; */
 }

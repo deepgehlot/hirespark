@@ -81,24 +81,50 @@
         });
 
         $(".demo-slides").owlCarousel({
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            },
-            loop: true,
+            items: 3,
             margin: 30,
+            loop: true,
+            center: true,
             autoplay: true,
             autoplayHoverPause: true,
             smartSpeed: 1000,
-            dots: true
+            dots: true,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            onInitialized: updateCarouselClasses,
+            onTranslated: updateCarouselClasses,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 15, /* Standard margin */
+                    stagePadding: 50, /* Show neighbors slightly like desktop view */
+                    center: true,
+                    nav: false /* Remove arrows as requested */
+                },
+                600: {
+                    items: 2,
+                    center: false,
+                    nav: true
+                },
+                1000: {
+                    items: 3,
+                    center: true,
+                    nav: true
+                }
+            }
         });
+
+        function updateCarouselClasses(event) {
+            // Remove custom classes from all items
+            $('.demo-slides .owl-item').removeClass('prev-slide next-slide');
+            
+            // Find the center item
+            var centerItem = $('.demo-slides .owl-item.center');
+            
+            // Add classes to immediate neighbors
+            centerItem.prev().addClass('prev-slide');
+            centerItem.next().addClass('next-slide');
+        }
 
         // Before/After Slides Active Code
         $(".before-after-slides").owlCarousel({
@@ -251,11 +277,22 @@
 
 
     // :: Sticky Navbar (FlowCV Style)
+    // :: Sticky Navbar & Badge Logic
     $window.on('scroll', function () {
-        if ($window.scrollTop() > 50) {
+        var scrollPos = $window.scrollTop();
+        
+        // Navbar Sticky
+        if (scrollPos > 50) {
             $('.header-area').addClass('sticky');
         } else {
             $('.header-area').removeClass('sticky');
+        }
+
+        // Delivery Badge Visibility (After Hero section, approx 600px)
+        if (scrollPos > 600) {
+            $('.delivery-highlight').addClass('is-visible');
+        } else {
+            $('.delivery-highlight').removeClass('is-visible');
         }
     });
 

@@ -1,0 +1,29 @@
+/* ... existing custom carousel styles ... */
+
+/* Responsive Mobile View - Flat (Like Desktop) */
+@media (max-width: 767px) {
+    /* Reset transforms - standard carousel behavior */
+    .demo-slides .owl-item .demo-item {
+        transform: scale(0.9);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+
+    /* Center (Active) Card Highlight */
+    .demo-slides .owl-item.center .demo-item {
+        transform: scale(1.05); /* Match desktop scale */
+        opacity: 1;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Match desktop shadow */
+        z-index: 10;
+    }
+    
+    /* Remove the complex stacking/hiding from previous iteration */
+    .demo-slides .owl-stage-outer {
+        overflow: hidden; /* Standard overflow */
+    }
+    
+    /* Ensure arrows are definitely gone if JS didn't catch it (double safety) */
+    .demo-slides .owl-nav {
+        display: none !important;
+    }
+}

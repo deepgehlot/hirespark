@@ -43,7 +43,7 @@
 }
 
 body.dark-version {
-    --bg-body: #212122;
+    --bg-body: black;
     --bg-card: #181935;
     --color-text-body: #d9d9d9;
     --color-heading-custom: #ffffff;
