@@ -6693,3 +6693,154 @@ label{
             color: white;
             box-shadow: 0 5px 15px rgba(23, 49, 135, 0.4);
         }
+
+/* Privacy Policy Hero Section */
+.privacy-hero-section {
+    padding: 180px 0 10px; /* Reduced bottom padding */
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* About Us Page Enhancements */
+
+/* Marquee Running Text */
+.marquee-section {
+    background-color: #173187; /* Primary Blue */
+    padding: 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.marquee-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 50s linear infinite;
+    align-items: center;
+}
+
+.marquee-item {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 40px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+    .marquee-section {
+        padding: 15px 0;
+    }
+    .marquee-container {
+        margin-bottom: 10px;
+    }
+    .marquee-item {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    .accountability-section {
+        padding-top: 50px;
+    }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* About Image Card */
+.about-image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-top: 30px;
+}
+
+.about-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Accountability Card */
+.accountability-card {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.accountability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.3);
+    background: rgba(0,0,0,0.4);
+}
+
+/* Service Card Hover Enhancement */
+.service_single_content {
+    transition: all 0.3s ease;
+}
+
+.service_single_content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.05);
+    border-color: #173187;
+}
+
+.service_single_content .service_icon i {
+    color: #173187;
+    transition: color 0.3s ease;
+}
+
+.service_single_content h5 {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.service_single_content p {
+    color: rgba(23, 49, 135, 0.5); /* #17318782 */
+    transition: color 0.3s ease;
+}
+.blue_heading{
+    color: #173187 !important
+}
+.service_single_content:hover .service_icon i,
+.service_single_content:hover h5,
+.service_single_content:hover p {
+    color: #ffffff !important;
+}
+
+/* Promise Card (Glow Effect) */
+.promise-card {
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 20px rgba(23, 49, 135, 0.3); /* Shadow + Subtle Blue Glow */
+    transition: all 0.3s ease;
+}
+
+.promise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(23, 49, 135, 0.6); /* Intensified Glow */
+    border-color: rgba(23, 49, 135, 0.5);
+}
