@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="css/custom_terms.css">
     <link rel="stylesheet" href="css/pricing-custom.css">
     <link rel="stylesheet" href="css/carousel-custom.css">
+    <link rel="stylesheet" href="css/carousel-custom.css">
     <link rel="stylesheet" href="css/carousel-custom-mobile.css">
+    <link rel="stylesheet" href="css/modal.css">
 
 </head>
 
@@ -970,6 +972,255 @@
     </footer>
     <!-- ##### Footer Area End ##### -->
 
+    <!-- Multi-step Modal -->
+    <div class="modal-overlay" id="templateModal">
+        <div class="multi-step-modal">
+            <div class="modal-header">
+                <h4 class="modal-title">Create Your Resume</h4>
+                <button class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <form id="resumeForm">
+                    <!-- Step 1: Personal Info -->
+                    <div class="form-step active" data-step="1">
+                        <h3 style="color:#fff; margin-bottom: 5px;">Starts With a Great Resume</h3>
+                        <span class="form-subtext">Give full details. Dont hold back. More information = stronger
+                            resume. Less information = weak results.</span>
+
+                        <div class="form-group">
+                            <label class="form-label">What is your full name ?</label>
+                            <input type="text" class="form-control-custom" name="fullName" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control-custom" name="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control-custom" name="phone" placeholder="+1 234 567 8900">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Location ( City , Country )</label>
+                            <input type="text" class="form-control-custom" name="location" placeholder="New York, USA">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Upload Your Current Resume</label>
+                            <div class="file-upload-zone" id="resumeUploadZone">
+                                <span class="upload-icon"><i class="fa fa-cloud-upload"></i></span>
+                                <span class="upload-text">Click to choose a file or drag here</span>
+                                <input type="file" class="file-upload-input" name="resumeFile" accept=".pdf,.doc,.docx">
+                                <span class="file-selected-name" id="resumeFileName"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Target & Emphasis -->
+                    <div class="form-step" data-step="2">
+                        <div class="form-group">
+                            <label class="form-label">What type of job or field are you targeting next?</label>
+                            <textarea class="form-control-custom" name="targetJob"
+                                placeholder="e.g. Senior Project Manager in Tech"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">What should this resume emphasize the most?</label>
+                            <div class="selection-grid" id="emphasisOptions">
+                                <div class="selection-btn" data-value="Leadership"><span class="tag-letter">A</span>
+                                    Leadership</div>
+                                <div class="selection-btn" data-value="Technical Skills"><span
+                                        class="tag-letter">B</span> Technical Skills</div>
+                                <div class="selection-btn" data-value="Research & Analysis"><span
+                                        class="tag-letter">C</span> Research & Analysis</div>
+                                <div class="selection-btn" data-value="Communication"><span class="tag-letter">D</span>
+                                    Communication / Client Facing</div>
+                                <div class="selection-btn" data-value="Teamwork"><span class="tag-letter">E</span>
+                                    Teamwork</div>
+                            </div>
+                            <input type="hidden" name="emphasis" id="emphasisInput">
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Work Experience -->
+                    <div class="form-step" data-step="3">
+                        <div class="form-group">
+                            <label class="form-label">Current Job title or previous one</label>
+                            <input type="text" class="form-control-custom" name="currentJobTitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control-custom" name="companyName">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Start Date - end Date ( or Present )</label>
+                            <input type="text" class="form-control-custom" name="cjobDates"
+                                placeholder="Jan 2020 - Present">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Key responsibilities , achievements, and measurable
+                                results</label>
+                            <textarea class="form-control-custom" name="responsibilities"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">List any measurable outcome or improvements from this role (
+                                example reduced processing time by 20 % ) *</label>
+                            <textarea class="form-control-custom" name="outcomes"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Education & Sections -->
+                    <div class="form-step" data-step="4">
+                        <div class="form-group">
+                            <label class="form-label">Degree or Program</label>
+                            <input type="text" class="form-control-custom" name="degree">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">School / University</label>
+                            <input type="text" class="form-control-custom" name="school">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Years Attended ( Start - End )</label>
+                            <input type="text" class="form-control-custom" name="eduDates">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Location ( City , Country )</label>
+                            <input type="text" class="form-control-custom" name="eduLocation">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Where do you prefer your Education section ?</label>
+                            <div class="radio-select-group" id="eduPosOptions">
+                                <div class="radio-option" data-value="top">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">At the top (above Experience)</span>
+                                </div>
+                                <div class="radio-option" data-value="bottom">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">At the bottom (below Experience)</span>
+                                </div>
+                                <div class="radio-option" data-value="none">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">No preference</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="eduPosition" id="eduPosInput">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">How should we order your work experience?</label>
+                            <div class="radio-select-group" id="expOrderOptions">
+                                <div class="radio-option" data-value="newest-oldest">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">Newest → Oldest (recommended)</span>
+                                </div>
+                                <div class="radio-option" data-value="oldest-newest">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">Oldest → Newest</span>
+                                </div>
+                                <div class="radio-option" data-value="none">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-label">No preference</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="expOrder" id="expOrderInput">
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Skills & Exclusions -->
+                    <div class="form-step" data-step="5">
+                        <div class="form-group">
+                            <label class="form-label">Professional / Soft Skills ( max 6 )</label>
+                            <textarea class="form-control-custom" name="softSkills"
+                                style="min-height: 60px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tools / Software ( max 6 ) *</label>
+                            <textarea class="form-control-custom" name="tools" style="min-height: 60px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Languages ( include proficiency if possible )</label>
+                            <textarea class="form-control-custom" name="languages" style="min-height: 60px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Are they any sections you do not want included ?</label>
+                            <div class="selection-grid" id="excludeOptions">
+                                <div class="selection-btn" data-value="Languages">Languages</div>
+                                <div class="selection-btn" data-value="Tools / Skills">Tools / Skills</div>
+                                <div class="selection-btn" data-value="Projects">Projects</div>
+                                <div class="selection-btn" data-value="Certifications">Certifications</div>
+                                <div class="selection-btn" data-value="Interests">Interests</div>
+                                <div class="selection-btn" data-value="None">None, keep everything</div>
+                            </div>
+                            <input type="hidden" name="excludedSections" id="excludedSectionsInput">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Is there anything you do NOT want included ? ( a specific job ,
+                                personal story , career gap , etc ) *</label>
+                            <textarea class="form-control-custom" name="specificExclusions"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Only add a photo if you want it included on your resume .</label>
+                            <div class="file-upload-zone" id="photoUploadZone">
+                                <span class="upload-icon"><i class="fa fa-camera"></i></span>
+                                <span class="upload-text">Click to choose a file or drag here</span>
+                                <input type="file" class="file-upload-input" name="photoFile" accept="image/*">
+                                <span class="file-selected-name" id="photoFileName"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Final Style Selection -->
+                    <div class="form-step" data-step="6">
+                        <h3 style="color:#fff; margin-bottom: 20px;">Final Step Select Your Style Your Resume is Next
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label">Whats your full name ?</label>
+                            <input type="text" class="form-control-custom" name="confirmName"
+                                placeholder="Confirm Full Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Choose the Style you prefer</label>
+                            <div class="style-select-grid" id="styleOptions">
+                                <div class="style-card" data-value="purple-modern">
+                                    <span class="tag-letter"
+                                        style="background:#333; color:#fff; padding:2px 8px; border-radius:4px; margin-right:10px;">A</span>
+                                    <span style="color:#fff;">Purple Strategic Professional</span>
+                                </div>
+                                <div class="style-card" data-value="modern-corporate">
+                                    <span class="tag-letter"
+                                        style="background:#333; color:#fff; padding:2px 8px; border-radius:4px; margin-right:10px;">C</span>
+                                    <span style="color:#fff;">Black Executive Classic</span>
+                                </div>
+                                <div class="style-card" data-value="yellow-modern">
+                                    <span class="tag-letter"
+                                        style="background:#333; color:#fff; padding:2px 8px; border-radius:4px; margin-right:10px;">B</span>
+                                    <span style="color:#fff;">Yellow Modern Impact</span>
+                                </div>
+
+                            </div>
+                            <input type="hidden" name="selectedStyle" id="selectedStyleInput">
+                        </div>
+
+                        <div class="resume-preview">
+                            <p style="color:#666;">Preview of style will appear here</p>
+                            <!-- Image would be dynamically loaded here based on selection -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-modal-secondary" id="prevBtn" style="visibility: hidden;">Back</button>
+                <button type="button" class="btn-modal-primary" id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
     <!-- ########## All JS ########## -->
     <!-- jQuery js -->
     <script src="js/jquery.min.js"></script>
@@ -987,6 +1238,7 @@
 
     <!-- script js -->
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
 
 </body>
 
